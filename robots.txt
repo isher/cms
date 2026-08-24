@@ -1,0 +1,12 @@
+User-agent: *
+# 拦截带page参数的垃圾分页链接
+Disallow: /*?page=
+Disallow: /*?*
+Disallow: /?*
+# 明确允许爬虫访问站点地图
+Allow: /sitemap.xml
+Allow: /sitemap.txt
+
+# 同时声明两份站点地图
+Sitemap: https://swbj.qsis.cn/sitemap.xml
+Sitemap: https://swbj.qsis.cn/sitemap.txt
