@@ -2,16 +2,16 @@
 <html lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>认知解惑 - QsisCms内容管理系统</title>
+    <title>第一篇：Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线） - QsisCms内容管理系统</title>
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
-<link rel="canonical" href="https://cms.qsis.cn/jiehuo.html.html">
+<link rel="canonical" href="https://cms.qsis.cn/article/g2wcjg.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
 <meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
-<meta name="description" content="这里是全势•QsisCms内容管理系统的官方网站">
-	    <meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="description" content="很多新手在接触 Qsis CMS 时，容易被传统CMS思维误导，误以为需要数据库部署，实际Qsis CMS 是纯文件存储、零数据库依赖的轻量化内容管理系统，无需...">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="site" content="https://cms.qsis.cn">
@@ -94,32 +94,32 @@ mainNav.querySelectorAll('a').forEach(function(link){
         <span class="sep">/</span>
         <a href="https://cms.qsis.cn/list">文章</a>
         <span class="sep">/</span>
-        <span class="current">认知解惑</span>
+        <span class="current">第一篇：Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线）</span>
     </nav>
 
     <!-- 文章标题 -->
-    <h1 class="article-title">认知解惑</h1>
+    <h1 class="article-title">第一篇：Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线）</h1>
 
     <!-- 文章元信息 -->
     <div class="article-meta">
         <span class="meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            2026-08-13        </span>
+            2026-08-28        </span>
         <span class="meta-divider">·</span>
         <span class="meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    </span>
+            乔硕        </span>
             </div>
 
     <!-- 封面图 -->
     
     <!-- 正文内容区 -->
     <div class="article-content">
-        <p><br></p>    </div>
+        <p>很多新手在接触 Qsis CMS 时，容易被传统CMS思维误导，误以为需要数据库部署，实际<strong>Qsis CMS 是纯文件存储、零数据库依赖</strong>的轻量化内容管理系统，无需MySQL、MariaDB等数据库服务，部署极简、低配置服务器秒开。本文基于Linux CentOS7/8、Ubuntu主流服务器，提供一套零踩坑、可直接复刻的无数据库专属部署流程，适配个人博客、企业轻量官网、资讯展示站快速上线。</p><h3>一、部署前环境需求梳理</h3><p>Qsis CMS 是轻量化开源内容管理系统，适配主流LNMP运行环境，低配置服务器即可流畅运行，基础环境要求如下：</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>操作系统</strong>：CentOS 7/8、Ubuntu 18.04+ 主流Linux系统</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Web服务</strong>：Nginx 1.18+ / Apache 2.4+</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>PHP版本</strong>：PHP7.2-PHP8.1（最佳兼容版本，不建议PHP8.2及以上高版本）</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>数据库要求</strong>：<strong>无需任何数据库</strong>，全站数据以文件形式存储</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>环境扩展</strong>：需开启fileinfo、gd、curl、mbstring、openssl 核心扩展（文件读写、图片处理必备）</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>服务器配置</strong>：1核1G及以上，带宽1M以上，极低资源占用</li></ol><h3>二、最简运行环境搭建（Nginx+PHP 无需数据库）</h3><p>Qsis CMS 无数据库依赖，无需安装MySQL/MariaDB，仅需搭建「Web服务+PHP+必备PHP扩展」极简环境即可运行。下面以主流Nginx为例，提供最小化、无冗余的生产环境搭建步骤，不装任何多余组件，节省服务器资源、部署速度更快。</p><p>1、关闭服务器防火墙及SELinux（测试部署专用，生产环境需配置端口放行）</p><div class="ql-code-block-container" spellcheck="false"><div class="ql-code-block" data-language="plain">systemctl stop firewalld</div><div class="ql-code-block" data-language="plain">systemctl disable firewalld</div><div class="ql-code-block" data-language="plain">setenforce 0</div></div><p>2、安装Nginx + PHP核心程序及Qsis CMS必备扩展（PHP7.4为最优兼容版本），执行一键安装命令，全程无数据库安装步骤：</p><div class="ql-code-block-container" spellcheck="false"><div class="ql-code-block" data-language="plain"># CentOS系统安装命令</div><div class="ql-code-block" data-language="plain">yum install -y nginx php74 php74-fpm php74-gd php74-curl php74-mbstring php74-fileinfo php74-openssl</div><div class="ql-code-block" data-language="plain"><br></div><div class="ql-code-block" data-language="plain"># Ubuntu系统安装命令</div><div class="ql-code-block" data-language="plain">apt install -y nginx php7.4 php7.4-fpm php7.4-gd php7.4-curl php7.4-mbstring php7.4-fileinfo php7.4-openssl</div></div><p>3、启动并设置开机自启Nginx、PHP-FPM服务，确保服务常驻运行：</p><div class="ql-code-block-container" spellcheck="false"><div class="ql-code-block" data-language="plain">systemctl start nginx</div><div class="ql-code-block" data-language="plain">systemctl enable nginx</div><div class="ql-code-block" data-language="plain">systemctl start php-fpm</div><div class="ql-code-block" data-language="plain">systemctl enable php-fpm</div></div><p>4、执行环境检测，通过 <code>php -m</code> 查看已安装扩展，确认gd、curl、mbstring、fileinfo、openssl 全部就位，满足Qsis CMS运行要求。</p><h3>三、Qsis CMS 程序下载与上传</h3><p>1、获取 Qsis CMS 官方稳定版源码包，优先选择正式发行版，避免开发测试版存在漏洞和BUG。</p><p>2、通过FTP工具或服务器wget命令，将源码包上传至服务器站点根目录，解压全部文件，确保根目录存在index.php、install.php 等核心安装文件。</p><p>3、配置站点目录权限，递归赋予755目录权限、644文件权限，规避权限不足导致的安装失败、后台无法写入数据问题：</p><div class="ql-code-block-container" spellcheck="false"><div class="ql-code-block" data-language="plain">chmod -R 755 /网站根目录</div><div class="ql-code-block" data-language="plain">chmod -R 644 /网站根目录/*</div></div><h3>四、Nginx站点配置与伪静态设置</h3><p>2、重启Nginx服务，使站点配置生效，确保域名可正常解析至服务器IP，同时确认PHP服务运行正常。</p><h3>五、浏览器在线安装与站点初始化</h3><p>1、浏览器访问绑定的域名，自动跳转 Qsis CMS 安装界面，系统自动检测环境、PHP扩展、目录权限状态，全部通过即可下一步。</p><p>2、无需填写任何数据库信息，直接设置后台管理员账号、登录密码、绑定邮箱，完成基础管理员配置。</p><p>3、勾选用户协议，点击开始安装，系统自动生成核心配置文件、初始化站点目录结构，无需导入数据表，1分钟内即可完成安装。</p><p>4、安装成功后，自动生成前台首页和后台登录入口，务必<strong>删除根目录install安装文件夹</strong>，防止站点被恶意重装篡改。</p><h3>六、部署后基础核验与排错</h3><p>1、前台访问：域名正常打开首页，无空白页、报错代码，静态资源加载正常。</p><p>2、后台登录：通过后台地址输入管理员账号密码，可正常登录、无权限报错。</p><p>3、常见问题解决：页面空白多为PHP扩展缺失、伪静态未配置；无法登录多为目录权限不足；安装失败基本都是文件读写权限异常，无数据库相关报错。</p><p>至此，Qsis CMS 完整部署流程全部完成，站点正式上线，可进入后台进行内容搭建、模板配置、功能开启等后续操作。</p>    </div>
 
     <!-- 底部标签 -->
         <div class="article-tags">
-        <a href="https://cms.qsis.cn/tag/乔硕帮您解惑/index.html">乔硕帮您解惑</a>    </div>
+        <a href="https://cms.qsis.cn/tag/实战案例/index.html">实战案例</a> <a href="https://cms.qsis.cn/tag/QsisCms安装部署/index.html">QsisCms安装部署</a>    </div>
     
     <!-- 分享 & 返回 -->
     <div class="article-footer">
@@ -128,29 +128,29 @@ mainNav.querySelectorAll('a').forEach(function(link){
             返回首页
         </a>
         <div class="article-share">
-            <a href="https://twitter.com/intent/tweet?text=%E8%AE%A4%E7%9F%A5%E8%A7%A3%E6%83%91&url=https%3A%2F%2Fcms.qsis.cn%2Fjiehuo.html.html" target="_blank" rel="noopener" class="share-btn" title="分享到 X">
+            <a href="https://twitter.com/intent/tweet?text=%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9AQsis+CMS+%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E9%83%A8%E7%BD%B2%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%C2%B7%E7%BA%AF%E6%96%87%E4%BB%B6%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%EF%BC%89&url=https%3A%2F%2Fcms.qsis.cn%2Farticle%2Fg2wcjg.html" target="_blank" rel="noopener" class="share-btn" title="分享到 X">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcms.qsis.cn%2Fjiehuo.html.html" target="_blank" rel="noopener" class="share-btn" title="分享到 Facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcms.qsis.cn%2Farticle%2Fg2wcjg.html" target="_blank" rel="noopener" class="share-btn" title="分享到 Facebook">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="mailto:?subject=%E8%AE%A4%E7%9F%A5%E8%A7%A3%E6%83%91&body=https%3A%2F%2Fcms.qsis.cn%2Fjiehuo.html.html" class="share-btn" title="邮件分享">
+            <a href="mailto:?subject=%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9AQsis+CMS+%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E9%83%A8%E7%BD%B2%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%C2%B7%E7%BA%AF%E6%96%87%E4%BB%B6%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%EF%BC%89&body=https%3A%2F%2Fcms.qsis.cn%2Farticle%2Fg2wcjg.html" class="share-btn" title="邮件分享">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
             <!-- 微博 -->
-            <a href="https://service.weibo.com/share/share.php?title=%E8%AE%A4%E7%9F%A5%E8%A7%A3%E6%83%91&url=https%3A%2F%2Fcms.qsis.cn%2Fjiehuo.html.html" target="_blank" rel="noopener" class="share-btn" title="分享到微博">
+            <a href="https://service.weibo.com/share/share.php?title=%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9AQsis+CMS+%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E9%83%A8%E7%BD%B2%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%C2%B7%E7%BA%AF%E6%96%87%E4%BB%B6%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%EF%BC%89&url=https%3A%2F%2Fcms.qsis.cn%2Farticle%2Fg2wcjg.html" target="_blank" rel="noopener" class="share-btn" title="分享到微博">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zm.029-9.178c-4.23.421-7.917 3.039-7.676 5.849.242 2.81 4.239 4.508 8.478 4.084 4.23-.422 7.918-3.04 7.676-5.85-.242-2.81-4.24-4.507-8.478-4.083zm-1.447 7.718c-.706.166-1.43-.161-1.584-.729-.153-.568.315-1.139 1.02-1.303.707-.165 1.43.161 1.584.729.154.568-.314 1.138-1.02.729zm1.903-2.118c-.272.064-.55-.101-.617-.36-.068-.259.132-.52.404-.584.272-.063.55.101.618.36.067.259-.133.52-.405.584zm.463-2.679c-1.803-.42-3.838.23-4.545 1.456-.708 1.226-.022 2.559 1.78 2.98 1.803.42 3.838-.23 4.546-1.456.707-1.226.021-2.559-1.781-2.98zm7.008-4.607c-.36-.105-.75.056-.865.359-.116.303.048.628.408.733 1.07.313 1.882 1.11 2.217 2.116.334 1.006.148 2.09-.502 2.904-.224.28-.179.679.101.898.28.219.686.171.91-.108.998-1.243 1.282-2.892.74-4.418-.542-1.526-1.852-2.67-3.377-3.17l-.062-.014z"/>
                 </svg>
             </a>
             <!-- QQ -->
-            <a href="https://connect.qq.com/widget/shareqq/index.html?title=%E8%AE%A4%E7%9F%A5%E8%A7%A3%E6%83%91&url=https%3A%2F%2Fcms.qsis.cn%2Fjiehuo.html.html" target="_blank" rel="noopener" class="share-btn" title="分享到QQ">
+            <a href="https://connect.qq.com/widget/shareqq/index.html?title=%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9AQsis+CMS+%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E9%83%A8%E7%BD%B2%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%C2%B7%E7%BA%AF%E6%96%87%E4%BB%B6%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%EF%BC%89&url=https%3A%2F%2Fcms.qsis.cn%2Farticle%2Fg2wcjg.html" target="_blank" rel="noopener" class="share-btn" title="分享到QQ">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.8 13.8c-.4.5-.9.8-1.5.8-.3 0-.6-.1-.9-.2-.5.3-1.1.5-1.7.5-1.9 0-3.5-1.3-3.9-3-.1-.4 0-.8.3-1.1.3-.3.7-.4 1.1-.3.4.1.7.4.8.8.2.6.7 1.1 1.3 1.1.6 0 1.1-.5 1.3-1.1.1-.4.4-.7.8-.8.4-.1.8 0 1.1.3.3.3.4.7.3 1.1z"/>
                 </svg>
             </a>
             <!-- 微信（无直接跳转，弹窗复制链接） -->
-            <a href="javascript:void(0);" onclick="navigator.clipboard.writeText('https://cms.qsis.cn/jiehuo.html.html').then(()=>alert('链接已复制！请到微信粘贴发送'))" class="share-btn" title="分享到微信">
+            <a href="javascript:void(0);" onclick="navigator.clipboard.writeText('https://cms.qsis.cn/article/g2wcjg.html').then(()=>alert('链接已复制！请到微信粘贴发送'))" class="share-btn" title="分享到微信">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-2.036 2.936c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
                 </svg>

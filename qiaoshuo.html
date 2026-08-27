@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
 <meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
-<meta name="description" content="这里是QsisCms内容管理系统的官方网站">
+<meta name="description" content="这里是全势•QsisCms内容管理系统的官方网站">
 	    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,44 +48,163 @@
 -->
 <meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body>
-<!-- 导航栏，增加 class 用于js控制吸顶 -->
+<!-- 导航栏 -->
 <header class="site-header" id="siteHeader">
     <div class="container">
         <div class="brand">
             <a href="https://cms.qsis.cn">QsisCms内容管理系统</a>
         </div>
-        <nav class="main-nav">
-            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/liuyan.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn/tag/Qsis/" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/contact.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>            <a href="#" class="nav-cta">免费开始</a>
+        </nav>
     </div>
 </header>
 <script>
 const headerDom = document.getElementById('siteHeader');
-let lastScrollY = 0;
-window.addEventListener('scroll',function(){
-    const scrollY = window.scrollY;
-    if(scrollY > 80){
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
         headerDom.classList.add('header-fixed');
-    }else{
+    } else {
         headerDom.classList.remove('header-fixed');
     }
-    lastScrollY = scrollY;
-})
+});
+
+navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    mainNav.classList.toggle('open');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        navToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+    });
+});
 </script>
-<div class="article‑wrap">
-    <h1 class="article‑title">乔硕简介</h1>
-    <div class="article‑meta">
-        <span>2019-05-13</span> · <span>作者：</span>
+<article class="article-wrap">
+    <!-- 面包屑 -->
+    <nav class="article-breadcrumb">
+        <a href="https://cms.qsis.cn">首页</a>
+        <span class="sep">/</span>
+        <a href="https://cms.qsis.cn/list">文章</a>
+        <span class="sep">/</span>
+        <span class="current">乔硕简介</span>
+    </nav>
+
+    <!-- 文章标题 -->
+    <h1 class="article-title">乔硕简介</h1>
+
+    <!-- 文章元信息 -->
+    <div class="article-meta">
+        <span class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2019-05-13        </span>
+        <span class="meta-divider">·</span>
+        <span class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </span>
+                <span class="meta-divider">·</span>
+        <span class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            含封面图
+        </span>
+            </div>
+
+    <!-- 封面图 -->
+        <div class="article-cover">
+        <img src="https://swbj.qsis.cn/upload/images/qiaoshuo.jpg" alt="乔硕简介" loading="lazy">
     </div>
-    <div class="article‑content">
+    
+    <!-- 正文内容区 -->
+    <div class="article-content">
         <h1 class="ql-align-center"><span style="background-color: transparent;">乔硕 简介</span></h1><p class="ql-align-center">笔名：锦全、Isher | 昵称：大头</p><p class="ql-align-center"><img src="https://swbj.qsis.cn/upload/images/qiaoshuo.jpg"></p><h2>一、账号矩阵</h2><p><strong>微信公众号：深悟笔记</strong></p><p><strong>全平台同名</strong>：百度百家号、知乎、头条号｜深悟笔记</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>认知心理：拆解认知逻辑，洞察人性心理</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>格物思理：剖析事物本质，梳理底层规律</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人文笔记：聚焦人文视角，观察社会百态</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人生成长：沉淀成长感悟，赋能自我提升</li></ol><p><br></p><h2>二、个人简介</h2><p><strong>现居</strong>：北京</p><p><strong>背景</strong>：红军后代，根正苗红</p><p><strong>身份定位</strong>：跨界全能创作者，身兼小说作者、资深PHP全栈程序员、品牌营销策划人三重身份，兼具技术理性与文艺感性，深耕技术研发、文学原创、商业策划三大领域。</p><p><strong>个人特质</strong>：摩羯座极致深耕特质 + AB型血思辩思维，兼具狼性商业视野、严密逻辑思维、敏锐营销洞察力，追求极致、落地高效。</p><h2>三、从业履历</h2><p>17岁入行编程，拥有二十余年互联网技术、商业策划、文创出版从业经验，履历横跨互联网、政企服务、快消、文创出版等多个领域。</p><h3>任职经历</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2014–2016｜创业深耕 + 加多宝品牌策划</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><br></li></ol><h3>核心行业成就</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2002–2004年，参与对抗国内外黑客组织，深耕网络安全领域</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2008年，参与解决北京奥运官网互联网南北互联互通核心问题</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2009年，获评深信服年度优秀员工</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>资深快消品营销策划、大型赛事活动策划从业者</li></ol><h2>四、专业资质与技能</h2><h3>核心资质（行业认证）</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>思科CCNA、深信服VPN/AD双认证工程师</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Adobe 2.0平面设计师、国家计算机二级持证</li></ol><h3>多元从业技能</h3><p>PHP全栈开发、CMS系统自研、前端开发、服务器架构部署、网络安全防护；平面设计、网店装修、文创出版、品牌营销、赛事策划、精品咖啡制作。</p><h3>早期创业/项目经历</h3><p>原3D家居网创始人、英国索尼爱立信粉丝团创始人、SEfans-Rom开发团队负责人，深耕移动端系统适配与二次开发。</p><h2>五、代表作品</h2><h3>原创小说作品</h3><p>《强者社会》《红点程序》《今天，我是谁》《血型与战争》</p><p>小说Demo站点：<a href="https://xiaoshuo.qsis.cn" rel="noopener noreferrer" target="_blank">https://xiaoshuo.qsis.cn</a></p><h3>技术自研作品</h3><p>独立自研 <strong>Qsis CMS 全站系统框架</strong>（qsis.cn），持续迭代更新，搭载SSG静态化、Github同步、多语言、多用户等全栈功能；早年完成索尼爱立信全系ROM、link2sd脚本等移动端技术开发。</p><p>技术开发日志站点：<a href="https://bbme.qsis.cn" rel="noopener noreferrer" target="_blank">https://bbme.qsis.cn</a></p><h3>策划代表作</h3><p>全国大学生创业实战大赛 整体策划执行</p><h2>六、服务客户（部分）</h2><p>清华大学、北京大学、北京理工大学、北方交通大学、长江大学、中粮集团、五矿信托、索尼移动西南分公司、加多宝、北京客运段、多地铁路局等政企及高校单位。</p><h2>七、创作与生活理念</h2><h3>创作理念</h3><p>文学创作坚持原创独立，融合技术视角与人文艺术；技术开发坚持开源透明、极简高效，代码无加密，优化创作流程，赋能用户体验，开源使用仅需主动告知即可。</p><h3>生活信条</h3><p>爱好：编程、写作、观影、探索未知、独处深耕</p><p>人生信条：<strong>在有限的认知里，拓展无限的可能——做个明白人。</strong></p><h2>八、联系方式</h2><p>📧 邮箱：qiaoshuo [AT] gmail.com</p><h2>（非即时回复，所有邮件必阅必回）</h2>    </div>
-    <div style="margin‑top:30px">
-        标签：<a href="https://cms.qsis.cn/tag/isher/index.html">isher</a> <a href="https://cms.qsis.cn/tag/qiaoshuo/index.html">qiaoshuo</a> <a href="https://cms.qsis.cn/tag/作者/index.html">作者</a> <a href="https://cms.qsis.cn/tag/程序员/index.html">程序员</a> <a href="https://cms.qsis.cn/tag/全栈工程师/index.html">全栈工程师</a> <a href="https://cms.qsis.cn/tag/Qsis主理人/index.html">Qsis主理人</a>    </div>
-</div>
-<!-- footer -->
+
+    <!-- 底部标签 -->
+        <div class="article-tags">
+        <a href="https://cms.qsis.cn/tag/isher/index.html">isher</a> <a href="https://cms.qsis.cn/tag/qiaoshuo/index.html">qiaoshuo</a> <a href="https://cms.qsis.cn/tag/作者/index.html">作者</a> <a href="https://cms.qsis.cn/tag/程序员/index.html">程序员</a> <a href="https://cms.qsis.cn/tag/全栈工程师/index.html">全栈工程师</a> <a href="https://cms.qsis.cn/tag/Qsis主理人/index.html">Qsis主理人</a>    </div>
+    
+    <!-- 分享 & 返回 -->
+    <div class="article-footer">
+        <a href="https://cms.qsis.cn" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            返回首页
+        </a>
+        <div class="article-share">
+            <a href="https://twitter.com/intent/tweet?text=%E4%B9%94%E7%A1%95%E7%AE%80%E4%BB%8B&url=https%3A%2F%2Fcms.qsis.cn%2Fqiaoshuo.html" target="_blank" rel="noopener" class="share-btn" title="分享到 X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcms.qsis.cn%2Fqiaoshuo.html" target="_blank" rel="noopener" class="share-btn" title="分享到 Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="mailto:?subject=%E4%B9%94%E7%A1%95%E7%AE%80%E4%BB%8B&body=https%3A%2F%2Fcms.qsis.cn%2Fqiaoshuo.html" class="share-btn" title="邮件分享">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <!-- 微博 -->
+            <a href="https://service.weibo.com/share/share.php?title=%E4%B9%94%E7%A1%95%E7%AE%80%E4%BB%8B&url=https%3A%2F%2Fcms.qsis.cn%2Fqiaoshuo.html" target="_blank" rel="noopener" class="share-btn" title="分享到微博">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zm.029-9.178c-4.23.421-7.917 3.039-7.676 5.849.242 2.81 4.239 4.508 8.478 4.084 4.23-.422 7.918-3.04 7.676-5.85-.242-2.81-4.24-4.507-8.478-4.083zm-1.447 7.718c-.706.166-1.43-.161-1.584-.729-.153-.568.315-1.139 1.02-1.303.707-.165 1.43.161 1.584.729.154.568-.314 1.138-1.02.729zm1.903-2.118c-.272.064-.55-.101-.617-.36-.068-.259.132-.52.404-.584.272-.063.55.101.618.36.067.259-.133.52-.405.584zm.463-2.679c-1.803-.42-3.838.23-4.545 1.456-.708 1.226-.022 2.559 1.78 2.98 1.803.42 3.838-.23 4.546-1.456.707-1.226.021-2.559-1.781-2.98zm7.008-4.607c-.36-.105-.75.056-.865.359-.116.303.048.628.408.733 1.07.313 1.882 1.11 2.217 2.116.334 1.006.148 2.09-.502 2.904-.224.28-.179.679.101.898.28.219.686.171.91-.108.998-1.243 1.282-2.892.74-4.418-.542-1.526-1.852-2.67-3.377-3.17l-.062-.014z"/>
+                </svg>
+            </a>
+            <!-- QQ -->
+            <a href="https://connect.qq.com/widget/shareqq/index.html?title=%E4%B9%94%E7%A1%95%E7%AE%80%E4%BB%8B&url=https%3A%2F%2Fcms.qsis.cn%2Fqiaoshuo.html" target="_blank" rel="noopener" class="share-btn" title="分享到QQ">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.8 13.8c-.4.5-.9.8-1.5.8-.3 0-.6-.1-.9-.2-.5.3-1.1.5-1.7.5-1.9 0-3.5-1.3-3.9-3-.1-.4 0-.8.3-1.1.3-.3.7-.4 1.1-.3.4.1.7.4.8.8.2.6.7 1.1 1.3 1.1.6 0 1.1-.5 1.3-1.1.1-.4.4-.7.8-.8.4-.1.8 0 1.1.3.3.3.4.7.3 1.1z"/>
+                </svg>
+            </a>
+            <!-- 微信（无直接跳转，弹窗复制链接） -->
+            <a href="javascript:void(0);" onclick="navigator.clipboard.writeText('https://cms.qsis.cn/qiaoshuo.html').then(()=>alert('链接已复制！请到微信粘贴发送'))" class="share-btn" title="分享到微信">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-2.036 2.936c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</article>
+<!-- Footer -->
 <footer class="site-footer">
     <div class="container">
-        <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
-        <p>&copy; 2016 - 2026 . Powered by QSIS‑SSG.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">QsisCms内容管理系统</span>
+                <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="#">功能特性</a></li>
+                    <li><a href="#">使用文档</a></li>
+                    <li><a href="#">主题模板</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="#">快速开始</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">开发指南</a></li>
+                    <li><a href="https://cms.qsis.cn/rss.xml">RSS 订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="#">项目介绍</a></li>
+                    <li><a href="#">开源协议</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2026 QsisCms内容管理系统. Powered by QSIS-SSG.</p>
+            <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
+        </div>
     </div>
 </footer>
 </body>

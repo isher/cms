@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
 <meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
-<meta name="description" content="这里是QsisCms内容管理系统的官方网站">
+<meta name="description" content="这里是全势•QsisCms内容管理系统的官方网站">
 	    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,112 +48,119 @@
 -->
 <meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body>
-<!-- 导航栏，增加 class 用于js控制吸顶 -->
+<!-- 导航栏 -->
 <header class="site-header" id="siteHeader">
     <div class="container">
         <div class="brand">
             <a href="https://cms.qsis.cn">QsisCms内容管理系统</a>
         </div>
-        <nav class="main-nav">
-            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/liuyan.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn/tag/Qsis/" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/contact.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>            <a href="#" class="nav-cta">免费开始</a>
+        </nav>
     </div>
 </header>
 <script>
 const headerDom = document.getElementById('siteHeader');
-let lastScrollY = 0;
-window.addEventListener('scroll',function(){
-    const scrollY = window.scrollY;
-    if(scrollY > 80){
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
         headerDom.classList.add('header-fixed');
-    }else{
+    } else {
         headerDom.classList.remove('header-fixed');
     }
-    lastScrollY = scrollY;
-})
+});
+
+navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    mainNav.classList.toggle('open');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        navToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+    });
+});
 </script>
-<section class="tags-wrap">
-    <h2 class="section-title">全部标签</h2>
-            <div class="tag-cloud">
-                                            <a href="https://cms.qsis.cn/tag/佛/index.html">佛 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/死的感觉/index.html">死的感觉 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/心理认知/index.html">心理认知 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/健康养生/index.html">健康养生 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/健康警示/index.html">健康警示 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/微信/index.html">微信 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/两个号/index.html">两个号 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/虚情假意/index.html">虚情假意 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/随心所欲/index.html">随心所欲 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/社会/index.html">社会 (13)</a>
-                                            <a href="https://cms.qsis.cn/tag/格物思理/index.html">格物思理 (15)</a>
-                                            <a href="https://cms.qsis.cn/tag/网梯公司/index.html">网梯公司 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/20周年/index.html">20周年 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/二十周年/index.html">二十周年 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/价值观/index.html">价值观 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/想法/index.html">想法 (11)</a>
-                                            <a href="https://cms.qsis.cn/tag/识人技巧/index.html">识人技巧 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/实操方略/index.html">实操方略 (2)</a>
-                                            <a href="https://cms.qsis.cn/tag/URL黑名单/index.html">URL黑名单 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/iptable/index.html">iptable (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/网址/index.html">网址 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/人性认知/index.html">人性认知 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/人际相处/index.html">人际相处 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/社会博弈/index.html">社会博弈 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/亲情抉择/index.html">亲情抉择 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/深度思考/index.html">深度思考 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/基因与本能/index.html">基因与本能 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/认知心理/index.html">认知心理 (10)</a>
-                                            <a href="https://cms.qsis.cn/tag/反常举动/index.html">反常举动 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/性格保护/index.html">性格保护 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/零责任感/index.html">零责任感 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/没有责任感/index.html">没有责任感 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/简单/index.html">简单 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/明知不可为而为之/index.html">明知不可为而为之 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/反向思维/index.html">反向思维 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/三观认知/index.html">三观认知 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/开明派/index.html">开明派 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/创新精神/index.html">创新精神 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/打破常规/index.html">打破常规 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/人生成长/index.html">人生成长 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/社会观察/index.html">社会观察 (2)</a>
-                                            <a href="https://cms.qsis.cn/tag/信仰与坚持/index.html">信仰与坚持 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/个人成长/index.html">个人成长 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/正义坚守/index.html">正义坚守 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/创业创新/index.html">创业创新 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/性格与选择/index.html">性格与选择 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/固化思维/index.html">固化思维 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/家庭相处/index.html">家庭相处 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/超党员/index.html">超党员 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/超党员思维/index.html">超党员思维 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/超党员行为/index.html">超党员行为 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/疫情期间/index.html">疫情期间 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/保安对骂/index.html">保安对骂 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/公权力/index.html">公权力 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/音乐/index.html">音乐 (4)</a>
-                                            <a href="https://cms.qsis.cn/tag/KOD/index.html">KOD (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/Webshell/index.html">Webshell (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/可道云/index.html">可道云 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/网页控制台/index.html">网页控制台 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/dance_monkey/index.html">dance.monkey (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/歌曲/index.html">歌曲 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/mp3/index.html">mp3 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/中国大陆法律/index.html">中国大陆法律 (3)</a>
-                                            <a href="https://cms.qsis.cn/tag/民事诉讼法解释/index.html">民事诉讼法解释 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/道路交通安全法实施条例/index.html">道路交通安全法实施条例 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/交管局/index.html">交管局 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/消法/index.html">消法 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/工商局/index.html">工商局 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/哲学/index.html">哲学 (5)</a>
-                                            <a href="https://cms.qsis.cn/tag/名词解释/index.html">名词解释 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/生活_语录_想法_其他/index.html">生活、语录、想法、其他 (6)</a>
-                                            <a href="https://cms.qsis.cn/tag/记录/index.html">记录 (1)</a>
-                                            <a href="https://cms.qsis.cn/tag/什么叫自私__自私是什么_/index.html">什么叫自私? 自私是什么? (1)</a>
-                    </div>
-    </section>
-<!-- footer -->
+
+<!-- 页面标题 -->
+<section class="hero-section" style="padding:100px 0 48px;">
+    <div class="container">
+        <div class="hero-content" style="max-width:680px;margin:0 auto;text-align:center;">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span>标签云</span>
+            </div>
+            <h1>全部标签</h1>
+            <p>浏览所有内容标签，点击标签查看相关文章。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 标签云 -->
+<section class="tags-wrap" style="padding-top:32px;">
+    <div class="container">
+                    <div class="tag-cloud">
+                                                        <a href="https://cms.qsis.cn/tag/实战案例/index.html">
+                        实战案例                        <span class="tag-count">3</span>
+                    </a>
+                                                        <a href="https://cms.qsis.cn/tag/QsisCms安装部署/index.html">
+                        QsisCms安装部署                        <span class="tag-count">2</span>
+                    </a>
+                                                        <a href="https://cms.qsis.cn/tag/QsisCms管理/index.html">
+                        QsisCms管理                        <span class="tag-count">1</span>
+                    </a>
+                                                        <a href="https://cms.qsis.cn/tag/更新快讯/index.html">
+                        更新快讯                        <span class="tag-count">3</span>
+                    </a>
+                            </div>
+            </div>
+</section>
+
+<!-- Footer -->
 <footer class="site-footer">
     <div class="container">
-        <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
-        <p>&copy; 2016 - 2026 . Powered by QSIS‑SSG.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">QsisCms内容管理系统</span>
+                <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="#">功能特性</a></li>
+                    <li><a href="#">使用文档</a></li>
+                    <li><a href="#">主题模板</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="#">快速开始</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">开发指南</a></li>
+                    <li><a href="https://cms.qsis.cn/rss.xml">RSS 订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="#">项目介绍</a></li>
+                    <li><a href="#">开源协议</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2026 QsisCms内容管理系统. Powered by QSIS-SSG.</p>
+            <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
+        </div>
     </div>
 </footer>
 </body>
