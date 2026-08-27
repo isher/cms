@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>专栏：记录-深悟笔记｜原创文章站</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>专栏：记录-QsisCms内容管理系统</title>
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
-<link rel="canonical" href="https://swbj.qsis.cn/tag/记录/index.html">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <link rel="alternate" type="application/rss+xml" href="https://swbj.qsis.cn/rss.xml" title="深悟笔记 RSS 订阅">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <link rel="icon" type="image/png" href="https://swbj.qsis.cn/upload/images/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <meta name="site" content="https://swbj.qsis.cn">
+<link rel="canonical" href="https://cms.qsis.cn/tag/记录/index.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
+<meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
+<meta name="description" content="QsisCms 轻量静态站点生成程序，快速构建产品官网、文档站、博客，源码简单易二次开发">
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site" content="https://cms.qsis.cn">
     <meta property="og:image" content="/upload/images/favicon.ico">
-    <link rel="stylesheet" href="https://swbj.qsis.cn/files/theme/Qsis_swbj/style.css">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="深悟笔记｜原创文章站"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="深悟笔记｜原创文章站">
+    <link rel="stylesheet" href="https://cms.qsis.cn/files/static_theme/Qsiscms/style.css">
     <!--
            这是来自于本站开发的自有程序。尚未开源
                               _.._        ,----------.
@@ -52,228 +46,148 @@
                      '           |      /
                                  `      |
 -->
-<meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
-<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: { delay: 4000 },
-    pagination: { el: '.swiper-pagination', clickable: true }
-  });
-});
-</script>
-
-
-</head>
+<meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body>
-
-<!-- 顶部导航 -->
-<div class="header-top">
-  <div class="container">
-    <div>深悟笔记官方写作平台</div>
-    <div class="top-nav">
-<div class="submenu"><ul><li><a href="http://qsis.cn" target="_blank">总站首页</a></li><li><a href="https://swbj.qsis.cn/jiehuo.html" target="_blank">认知解惑</a></li><li><a href="https://swbj.qsis.cn/shenwubiji.html" target="_self">关于</a></li><li><a href="https://swbj.qsis.cn/tags/" target="_blank">标签</a></li><li><a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">作者</a></li><li><a href="https://swbj.qsis.cn/contact.html" target="_self">联系</a></li><li><a href="https://swbj.qsis.cn/qsiscms.html" target="_blank">QsisCMS</a></li></ul></div>    </div>
-  </div>
-</div>
-
-<!-- LOGO + 搜索 -->
-<div class="header-main">
-  <div class="container">
-    <div class="logo"><a href="https://swbj.qsis.cn" class="logo">深悟笔记｜原创文章站</a></div>
-    <div class="search-box">
-    	 <input type="text" id="search-input" placeholder="请输入关键词搜索" autocomplete="off">
-      <button>搜索</button>
+<!-- 导航栏，增加 class 用于js控制吸顶 -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="brand">
+            <a href="https://cms.qsis.cn">QsisCms内容管理系统</a>
+        </div>
+        <nav class="main-nav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/liuyan.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>        </nav>
     </div>
-  </div>
-</div>
+</header>
+<script>
+const headerDom = document.getElementById('siteHeader');
+let lastScrollY = 0;
+window.addEventListener('scroll',function(){
+    const scrollY = window.scrollY;
+    if(scrollY > 80){
+        headerDom.classList.add('header-fixed');
+    }else{
+        headerDom.classList.remove('header-fixed');
+    }
+    lastScrollY = scrollY;
+})
+</script>
+<!-- Hero首屏 -->
+<section class="hero-section">
+    <div class="container">
+        <h1>QsisCms 轻量静态站点生成程序</h1>
+        <p>简单、高速、可二次开发的SSG工具，快速构建产品官网、文档站点、技术博客，输出纯静态HTML，部署简单访问飞快。</p>
+        <a href="#" class="btn btn-primary">立即下载</a>
+        <a href="#" class="btn btn-outline">查看文档</a>
+    </div>
+</section>
 
-<!-- 主导航（带点击效果） -->
-<div class="main-nav">
-  <div class="container">
-<div class="menu-main"><ul><li><a href="https://swbj.qsis.cn/" target="_self">首 页</a></li><li><a href="https://swbj.qsis.cn/tag/格物思理/" target="_self">格物思理</a></li><li><a href="https://swbj.qsis.cn/tag/认知心理/" target="_blank">认知心理</a></li><li><a href="https://swbj.qsis.cn/tag/人生成长/" target="_blank">人生成长</a></li><li><a href="https://swbj.qsis.cn/tag/人文笔记/" target="_blank">人文笔记</a></li></ul></div>  </div>
-</div>
-<div class="container">
-  <div id="search-result"></div>
- </div>
-
-<!-- 轮播 -->
-<div class="banner">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-            <div class="swiper-slide">
-        <img src="https://swbj.qsis.cn/upload/month_2604/202604190100451166.jpg">
-        <div class="banner-text"></div>
-      </div>
-            <div class="swiper-slide">
-        <img src="https://swbj.qsis.cn/upload/month_2604/202604190100591161.jpg">
-        <div class="banner-text"></div>
-      </div>
-            <div class="swiper-slide">
-        <img src="https://swbj.qsis.cn/upload/month_2604/202604190101337880.jpg">
-        <div class="banner-text"></div>
-      </div>
-          </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</div>
-
-
-<div class="new-list">
-  <div class="container">
-    <!-- 左侧：最新发布 -->
-    <div class="left-news"> 
-
-
-
-
-    <div class="left-news">
-      
-      <h3 class="list-title"><a href=/tags/>专题</a>：记录</h3>
-      <div class="list-items">
-                              <div class="list-item">
-              <div class="title">
-                <a href="https://swbj.qsis.cn/article/hp2we0.html">虚拟和现实</a>
-              </div>
-              <div class="date">2019-05-27</div>
+<!-- 核心特性 白底 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>为什么选择 QsisCms</h2>
+            <p>专为开发者打造，不臃肿，专注静态网站生成</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>纯静态输出</h3>
+                <p>全部生成静态HTML页面，无需后端运行，CDN直接分发，访问速度极快，服务器压力极低。</p>
             </div>
-                        </div>
-      <div class="pagination">
-  </div>
+            <div class="feature-card">
+                <h3>主题模板系统</h3>
+                <p>PHP模板开发主题，结构清晰，修改简单，可快速定制官网、博客、文档站。</p>
+            </div>
+            <div class="feature-card">
+                <h3>Markdown编写内容</h3>
+                <p>文章使用Markdown撰写，支持标签、分类、摘要、封面图，专注内容创作。</p>
+            </div>
+            <div class="feature-card">
+                <h3>SEO友好</h3>
+                <p>自动生成TDK、canonical、RSS订阅、标签页，对搜索引擎高度友好。</p>
+            </div>
+            <div class="feature-card">
+                <h3>轻量无依赖</h3>
+                <p>代码精简，不需要复杂扩展，PHP即可运行，学习成本低，便于二次开发。</p>
+            </div>
+            <div class="feature-card">
+                <h3>多页面类型</h3>
+                <p>支持首页、文章、标签、列表、404自定义页面，满足产品官网全部需求。</p>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- 使用流程【浅灰色背景版块】 -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-title">
+            <h2>三步搭建你的站点</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1.编写内容</h3>
+                <p>使用Markdown撰写文章，配置站点信息，选择需要使用的主题模板。</p>
+            </div>
+            <div class="feature-card">
+                <h3>2.执行生成</h3>
+                <p>运行生成命令，程序批量渲染模板，输出完整静态HTML网站文件。</p>
+            </div>
+            <div class="feature-card">
+                <h3>3.上传部署</h3>
+                <p>将输出的静态文件上传到服务器、对象存储、CDN，完成网站上线。</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- 右侧：个人介绍 -->
-<div class="right-intro">
-	
-	  <h3 class="intro-title">Logo</h3>
-  <div class="intro-content">
-    <a href="https://swbj.qsis.cn/swbj.html" title="关于深悟笔记和QSIS.CMS">
-      <img src="https://swbj.qsis.cn/upload/images/logo.jpg">
-    </a>
-  </div>
-  <h3 class="intro-title">深悟笔记介绍</h3>
-  <div class="intro-content">
-深悟笔记是专注深度思考与本质探究的认知体系平台，以 “观世事、悟本质、思有度、行有矩” 为核心，构建起集事实采集、规律提炼、边界判断、实践验证于一体的完整认知系统。平台不提供标准答案，致力于唤醒用户主动思考能力，助力透过现象直击本质。内容覆盖认知逻辑、社会观察、思维模型等领域，以中立视角与批判性思维，输出体系化、可落地的认知方法论，为追求深度思考的用户提供专业、严谨的认知成长路径，与同频者共探事物运行的底层逻辑。  </div>
+<!-- FAQ常见问题（白底） -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>常见问题</h2>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <h4>QsisCms 需要PHP环境线上运行吗？</h4>
+                <div>不需要。PHP仅用于本地生成静态页面，生成完毕输出纯HTML，线上服务器只需要支持静态文件即可。</div>
+            </div>
+            <div class="faq-item">
+                <h4>可以用来做产品官网吗？</h4>
+                <div>完全可以，支持自定义首页、导航菜单、文章文档系统，本套主题就是产品官网模板。</div>
+            </div>
+            <div class="faq-item">
+                <h4>是否支持自定义主题？</h4>
+                <div>支持，主题由PHP模板+CSS组成，开发者可以直接修改或者新建自己的主题。</div>
+            </div>
+            <div class="faq-item">
+                <h4>支持什么格式写文章？</h4>
+                <div>主要使用Markdown，支持元数据配置标题、标签、时间、封面图、摘要。</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-</div>
+<!-- 文档/博客文章列表区域 -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-title">
+            <h2>最新文档 & 更新</h2>
+        </div>
+                                    <div class="list-item">
+                    <a href="https://cms.qsis.cn/article/hp2we0.html">虚拟和现实</a>
+                    <div class="date">2019-05-27</div>
+                </div>
+                            <div class="pagination">
+                    </div>
+    </div>
+</section>
 
-
-</div>
-<!-- 分页 -->
-
-</div>
-<!-- 底部 -->
-
-<div class="friend-link">
-  <div class="container">
-  	 <h3 class="list-title">链接</h3>
-<div class="friend-links">
-
-<a href="https://d.qsis.cn/" target="_blank">Qsis下载器</a><a href="https://ruiyarisheng.com" target="_blank">瑞雅日盛装饰</a><a href="http://game.qsis.cn" target="_blank">骑士游戏</a><a href="http://www.npc.gov.cn/" target="_blank">人民代表大会</a><a href="https://qsis.cn" target="_blank">Qsis.cn</a><a href="https://flk.npc.gov.cn/" target="_blank">国家法律法规数据库</a><a href="https://www.gov.cn/zhengce/xxgk/gjgzk/index.htm" target="_blank">国家规章库</a><a href="https://www.gsxt.gov.cn/" target="_blank">国家企业信用信息公示系统</a><a href="https://ailegal.baidu.com/" target="_blank">法律AI法行宝</a><a href="https://ssl.leguard.cn" target="_blank">SSL证书</a><a href="https://pdc.capub.cn/" target="_blank">ISBN图书查询</a></div>
-</div>
-
-<div class="footer">
-	
-	
-  <div class="container">
-    <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://swbj.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
-    <p>&copy; 2026 . Powered by QSIS-SSG.</p>
-  </div>
-</div>
-
-
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.qrcode@1.0.3/jquery.qrcode.min.js"></script>
-
-
-<script>
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const curr = document.getElementById('curr')
-let page = 1
-const max = 3
-
-function update(){
-  prev.disabled = page === 1
-  next.disabled = page === max
-  curr.textContent = page
-}
-
-prev.onclick = () => { page--; update() }
-next.onclick = () => { page++; update() }
-update()
-</script>
-<script>
-// 加载搜索索引
-let searchIndex = [];
-
-async function loadSearchIndex() {
-  try {
-    const res = await fetch('/search-index.json');
-    searchIndex = await res.json();
-    console.log(`已加载 ${searchIndex.length} 篇文章用于搜索`);
-  } catch (err) {
-    console.error('搜索索引加载失败', err);
-  }
-}
-
-// 执行搜索
-function doSearch(keyword) {
-  const resultBox = document.getElementById('search-result');
-  resultBox.innerHTML = '';
-
-  if (!keyword.trim()) {
-    return;
-  }
-
-  const kw = keyword.toLowerCase();
-  const matched = searchIndex.filter(item => {
-    const title = (item.title || '').toLowerCase();
-    const content = (item.content || '').toLowerCase();
-    return title.includes(kw) || content.includes(kw);
-  });
-
-  if (matched.length === 0) {
-    resultBox.innerHTML = '<div class="no-result">没有找到相关文章</div>';
-    return;
-  }
-
-  let html = '';
-  matched.forEach(item => {
-    html += `
-<div class="search-item">
-  <a href="${item.url}" target="_blank">${item.title}</a>
-  <div class="desc">${item.content.substring(0, 120)}...</div>
-</div>
-    `;
-  });
-
-  resultBox.innerHTML = html;
-}
-
-// 初始化
-document.addEventListener('DOMContentLoaded', () => {
-  loadSearchIndex();
-
-  const input = document.getElementById('search-input');
-  input.addEventListener('input', e => {
-    doSearch(e.target.value);
-  });
-});
-</script>
-<script>
-$(function(){
-    $('.qrcode').each(function(){
-        $(this).qrcode({
-            text: $(this).data('url'),
-            width: 100,
-            height: 100,
-            draw: false  
-        });
-    });
-});
-</script>
+<!-- footer -->
+<footer class="site-footer">
+    <div class="container">
+        <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
+        <p>&copy; 2016 - 2026 . Powered by QSIS‑SSG.</p>
+    </div>
+</footer>
 </body>
 </html>

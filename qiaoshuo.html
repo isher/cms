@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>乔硕简介 - 深悟笔记｜原创文章站</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>乔硕简介 - QsisCms内容管理系统</title>
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
-<link rel="canonical" href="https://swbj.qsis.cn/qiaoshuo.html">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <link rel="alternate" type="application/rss+xml" href="https://swbj.qsis.cn/rss.xml" title="深悟笔记 RSS 订阅">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <link rel="icon" type="image/png" href="https://swbj.qsis.cn/upload/images/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <meta name="site" content="https://swbj.qsis.cn">
+<link rel="canonical" href="https://cms.qsis.cn/qiaoshuo.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
+<meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
+<meta name="description" content="QsisCms 轻量静态站点生成程序，快速构建产品官网、文档站、博客，源码简单易二次开发">
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site" content="https://cms.qsis.cn">
     <meta property="og:image" content="/upload/images/favicon.ico">
-    <link rel="stylesheet" href="https://swbj.qsis.cn/files/theme/Qsis_swbj/style.css">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="深悟笔记｜原创文章站"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="深悟笔记｜原创文章站">
+    <link rel="stylesheet" href="https://cms.qsis.cn/files/static_theme/Qsiscms/style.css">
     <!--
            这是来自于本站开发的自有程序。尚未开源
                               _.._        ,----------.
@@ -52,304 +46,47 @@
                      '           |      /
                                  `      |
 -->
-<meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
-<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: { delay: 4000 },
-    pagination: { el: '.swiper-pagination', clickable: true }
-  });
-});
-</script>
-
-
-</head>
+<meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body>
-
-<!-- 顶部导航 -->
-<div class="header-top">
-  <div class="container">
-    <div>深悟笔记官方写作平台</div>
-    <div class="top-nav">
-<div class="submenu"><ul><li><a href="http://qsis.cn" target="_blank">总站首页</a></li><li><a href="https://swbj.qsis.cn/jiehuo.html" target="_blank">认知解惑</a></li><li><a href="https://swbj.qsis.cn/shenwubiji.html" target="_self">关于</a></li><li><a href="https://swbj.qsis.cn/tags/" target="_blank">标签</a></li><li><a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">作者</a></li><li><a href="https://swbj.qsis.cn/contact.html" target="_self">联系</a></li><li><a href="https://swbj.qsis.cn/qsiscms.html" target="_blank">QsisCMS</a></li></ul></div>    </div>
-  </div>
-</div>
-
-<!-- LOGO + 搜索 -->
-<div class="header-main">
-  <div class="container">
-    <div class="logo"><a href="https://swbj.qsis.cn" class="logo">深悟笔记｜原创文章站</a></div>
-    <div class="search-box">
-    	 <input type="text" id="search-input" placeholder="请输入关键词搜索" autocomplete="off">
-      <button>搜索</button>
+<!-- 导航栏，增加 class 用于js控制吸顶 -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="brand">
+            <a href="https://cms.qsis.cn">QsisCms内容管理系统</a>
+        </div>
+        <nav class="main-nav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qsiscms.html" target="_blank">关于</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/liuyan.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>        </nav>
     </div>
-  </div>
-</div>
-
-<!-- 主导航（带点击效果） -->
-<div class="main-nav">
-  <div class="container">
-<div class="menu-main"><ul><li><a href="https://swbj.qsis.cn/" target="_self">首 页</a></li><li><a href="https://swbj.qsis.cn/tag/格物思理/" target="_self">格物思理</a></li><li><a href="https://swbj.qsis.cn/tag/认知心理/" target="_blank">认知心理</a></li><li><a href="https://swbj.qsis.cn/tag/人生成长/" target="_blank">人生成长</a></li><li><a href="https://swbj.qsis.cn/tag/人文笔记/" target="_blank">人文笔记</a></li></ul></div>  </div>
-</div>
-<div class="container">
-  <div id="search-result"></div>
- </div>
-<!-- 文章双栏主体 -->
-<div class="container">
-  <div class="article-row">
-    <!-- 文章内容 -->
-    <div class="article-wrapper">
-      <h1 class="article-title">
-乔硕简介      	</h1>
-      <div class="article-info">
-        <span>2019-05-13</span>
-        <span>作者：</span>
-      </div>
-      
-<!-- 播放控制UI（SSG直接用） -->
-<div class="rate">🎧
-    <button id="toggle-speech">▶️</button>
-    <label for="rate-control">语速：</label>
-    <input type="range" id="rate-control" min="0.1" max="2" step="0.1" value="1">
-    <span id="rate-value">1</span>
-</div>
-      <div id="article-content" class="article-content">
- <h1 class="ql-align-center"><span style="background-color: transparent;">乔硕 简介</span></h1><p class="ql-align-center">笔名：锦全、Isher | 昵称：大头</p><p class="ql-align-center"><img src="https://swbj.qsis.cn/upload/images/qiaoshuo.jpg"></p><h2>一、账号矩阵</h2><p><strong>微信公众号：深悟笔记</strong></p><p><strong>全平台同名</strong>：百度百家号、知乎、头条号｜深悟笔记</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>认知心理：拆解认知逻辑，洞察人性心理</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>格物思理：剖析事物本质，梳理底层规律</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人文笔记：聚焦人文视角，观察社会百态</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人生成长：沉淀成长感悟，赋能自我提升</li></ol><p><br></p><h2>二、个人简介</h2><p><strong>现居</strong>：北京</p><p><strong>背景</strong>：红军后代，根正苗红</p><p><strong>身份定位</strong>：跨界全能创作者，身兼小说作者、资深PHP全栈程序员、品牌营销策划人三重身份，兼具技术理性与文艺感性，深耕技术研发、文学原创、商业策划三大领域。</p><p><strong>个人特质</strong>：摩羯座极致深耕特质 + AB型血思辩思维，兼具狼性商业视野、严密逻辑思维、敏锐营销洞察力，追求极致、落地高效。</p><h2>三、从业履历</h2><p>17岁入行编程，拥有二十余年互联网技术、商业策划、文创出版从业经验，履历横跨互联网、政企服务、快消、文创出版等多个领域。</p><h3>任职经历</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2014–2016｜创业深耕 + 加多宝品牌策划</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><br></li></ol><h3>核心行业成就</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2002–2004年，参与对抗国内外黑客组织，深耕网络安全领域</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2008年，参与解决北京奥运官网互联网南北互联互通核心问题</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2009年，获评深信服年度优秀员工</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>资深快消品营销策划、大型赛事活动策划从业者</li></ol><h2>四、专业资质与技能</h2><h3>核心资质（行业认证）</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>思科CCNA、深信服VPN/AD双认证工程师</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Adobe 2.0平面设计师、国家计算机二级持证</li></ol><h3>多元从业技能</h3><p>PHP全栈开发、CMS系统自研、前端开发、服务器架构部署、网络安全防护；平面设计、网店装修、文创出版、品牌营销、赛事策划、精品咖啡制作。</p><h3>早期创业/项目经历</h3><p>原3D家居网创始人、英国索尼爱立信粉丝团创始人、SEfans-Rom开发团队负责人，深耕移动端系统适配与二次开发。</p><h2>五、代表作品</h2><h3>原创小说作品</h3><p>《强者社会》《红点程序》《今天，我是谁》《血型与战争》</p><p>小说Demo站点：<a href="https://xiaoshuo.qsis.cn" rel="noopener noreferrer" target="_blank">https://xiaoshuo.qsis.cn</a></p><h3>技术自研作品</h3><p>独立自研 <strong>Qsis CMS 全站系统框架</strong>（qsis.cn），持续迭代更新，搭载SSG静态化、Github同步、多语言、多用户等全栈功能；早年完成索尼爱立信全系ROM、link2sd脚本等移动端技术开发。</p><p>技术开发日志站点：<a href="https://bbme.qsis.cn" rel="noopener noreferrer" target="_blank">https://bbme.qsis.cn</a></p><h3>策划代表作</h3><p>全国大学生创业实战大赛 整体策划执行</p><h2>六、服务客户（部分）</h2><p>清华大学、北京大学、北京理工大学、北方交通大学、长江大学、中粮集团、五矿信托、索尼移动西南分公司、加多宝、北京客运段、多地铁路局等政企及高校单位。</p><h2>七、创作与生活理念</h2><h3>创作理念</h3><p>文学创作坚持原创独立，融合技术视角与人文艺术；技术开发坚持开源透明、极简高效，代码无加密，优化创作流程，赋能用户体验，开源使用仅需主动告知即可。</p><h3>生活信条</h3><p>爱好：编程、写作、观影、探索未知、独处深耕</p><p>人生信条：<strong>在有限的认知里，拓展无限的可能——做个明白人。</strong></p><h2>八、联系方式</h2><p>📧 邮箱：qiaoshuo [AT] gmail.com</p><h2>（非即时回复，所有邮件必阅必回）</h2>      </div>
- 标签：<a href="https://swbj.qsis.cn/tag/isher/index.html">isher</a> <a href="https://swbj.qsis.cn/tag/qiaoshuo/index.html">qiaoshuo</a> <a href="https://swbj.qsis.cn/tag/作者/index.html">作者</a> <a href="https://swbj.qsis.cn/tag/程序员/index.html">程序员</a> <a href="https://swbj.qsis.cn/tag/全栈工程师/index.html">全栈工程师</a> <a href="https://swbj.qsis.cn/tag/Qsis主理人/index.html">Qsis主理人</a>      <!-- 上一篇 / 下一篇 -->
-      <div class="article-page">
-     <a href="https://swbj.qsis.cn/" class="btn">返回首页</a>
-      </div>
+</header>
+<script>
+const headerDom = document.getElementById('siteHeader');
+let lastScrollY = 0;
+window.addEventListener('scroll',function(){
+    const scrollY = window.scrollY;
+    if(scrollY > 80){
+        headerDom.classList.add('header-fixed');
+    }else{
+        headerDom.classList.remove('header-fixed');
+    }
+    lastScrollY = scrollY;
+})
+</script>
+<div class="article‑wrap">
+    <h1 class="article‑title">乔硕简介</h1>
+    <div class="article‑meta">
+        <span>2019-05-13</span> · <span>作者：</span>
     </div>
-
-    <!-- ========== 右侧边栏（post-sidebar） ========== -->
-    <div class="post-sidebar">
-
-
-                  <!-- RSS -->
-      <div class="sidebar-box">
-<a href="https://swbj.qsis.cn/rss.xml" target="_blank" style="text-decoration:none; color:#333;">     <img src="https://www.w3schools.com/xml/pic_rss.gif" alt="RSS 订阅" style="width:16px; height:16px; vertical-align:middle; margin-right:6px;">     订阅 RSS / Feed   </a>       </div>
-      
-      
-            <!-- 二维码 -->
-      <div class="sidebar-box">
-      	<div class="sidebar-title">本篇文章二维码</div>
-        		           		<div class="qrcode" data-url="https://swbj.qsis.cn/qiaoshuo.html"></div>
-        		您可以通过手机语音助手指令“扫描二维码”，进行扫描并打开浏览器进行阅读，也可以通过微信扫一扫阅读文章。
-       </div>
-       
-                  <!-- 简介内容 -->
-
-
-
-<div class="sidebar-box"><a href="https://swbj.qsis.cn/swbj.html" title="关于深悟笔记和QSIS.CMS"><img src="https://swbj.qsis.cn/upload/images/logo.jpg "></a></div>
-<div class="sidebar-box">
-	<div class="sidebar-title">本文作者</div>
-	
-	<a href="https://swbj.qsis.cn/qiaoshuo.html" title="乔硕">
-		<img src="https://swbj.qsis.cn/upload/images/qiaoshuo.jpg ">
-		</a>
-		</div> 
-
-
-      <!-- 文章分类 
-      <div class="sidebar-box">
-        <h3 class="sidebar-title">文章分类</h3>
-        <ul class="sidebar-cat">
-          <li>认知心理</li>
-          <li>格物思理</li>
-          <li>人文笔记</li>
-          <li>人生成长</li>
-        </ul>
-      </div>-->
-
+    <div class="article‑content">
+        <h1 class="ql-align-center"><span style="background-color: transparent;">乔硕 简介</span></h1><p class="ql-align-center">笔名：锦全、Isher | 昵称：大头</p><p class="ql-align-center"><img src="https://swbj.qsis.cn/upload/images/qiaoshuo.jpg"></p><h2>一、账号矩阵</h2><p><strong>微信公众号：深悟笔记</strong></p><p><strong>全平台同名</strong>：百度百家号、知乎、头条号｜深悟笔记</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>认知心理：拆解认知逻辑，洞察人性心理</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>格物思理：剖析事物本质，梳理底层规律</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人文笔记：聚焦人文视角，观察社会百态</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>人生成长：沉淀成长感悟，赋能自我提升</li></ol><p><br></p><h2>二、个人简介</h2><p><strong>现居</strong>：北京</p><p><strong>背景</strong>：红军后代，根正苗红</p><p><strong>身份定位</strong>：跨界全能创作者，身兼小说作者、资深PHP全栈程序员、品牌营销策划人三重身份，兼具技术理性与文艺感性，深耕技术研发、文学原创、商业策划三大领域。</p><p><strong>个人特质</strong>：摩羯座极致深耕特质 + AB型血思辩思维，兼具狼性商业视野、严密逻辑思维、敏锐营销洞察力，追求极致、落地高效。</p><h2>三、从业履历</h2><p>17岁入行编程，拥有二十余年互联网技术、商业策划、文创出版从业经验，履历横跨互联网、政企服务、快消、文创出版等多个领域。</p><h3>任职经历</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2014–2016｜创业深耕 + 加多宝品牌策划</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><br></li></ol><h3>核心行业成就</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2002–2004年，参与对抗国内外黑客组织，深耕网络安全领域</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2008年，参与解决北京奥运官网互联网南北互联互通核心问题</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>2009年，获评深信服年度优秀员工</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>资深快消品营销策划、大型赛事活动策划从业者</li></ol><h2>四、专业资质与技能</h2><h3>核心资质（行业认证）</h3><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>思科CCNA、深信服VPN/AD双认证工程师</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Adobe 2.0平面设计师、国家计算机二级持证</li></ol><h3>多元从业技能</h3><p>PHP全栈开发、CMS系统自研、前端开发、服务器架构部署、网络安全防护；平面设计、网店装修、文创出版、品牌营销、赛事策划、精品咖啡制作。</p><h3>早期创业/项目经历</h3><p>原3D家居网创始人、英国索尼爱立信粉丝团创始人、SEfans-Rom开发团队负责人，深耕移动端系统适配与二次开发。</p><h2>五、代表作品</h2><h3>原创小说作品</h3><p>《强者社会》《红点程序》《今天，我是谁》《血型与战争》</p><p>小说Demo站点：<a href="https://xiaoshuo.qsis.cn" rel="noopener noreferrer" target="_blank">https://xiaoshuo.qsis.cn</a></p><h3>技术自研作品</h3><p>独立自研 <strong>Qsis CMS 全站系统框架</strong>（qsis.cn），持续迭代更新，搭载SSG静态化、Github同步、多语言、多用户等全栈功能；早年完成索尼爱立信全系ROM、link2sd脚本等移动端技术开发。</p><p>技术开发日志站点：<a href="https://bbme.qsis.cn" rel="noopener noreferrer" target="_blank">https://bbme.qsis.cn</a></p><h3>策划代表作</h3><p>全国大学生创业实战大赛 整体策划执行</p><h2>六、服务客户（部分）</h2><p>清华大学、北京大学、北京理工大学、北方交通大学、长江大学、中粮集团、五矿信托、索尼移动西南分公司、加多宝、北京客运段、多地铁路局等政企及高校单位。</p><h2>七、创作与生活理念</h2><h3>创作理念</h3><p>文学创作坚持原创独立，融合技术视角与人文艺术；技术开发坚持开源透明、极简高效，代码无加密，优化创作流程，赋能用户体验，开源使用仅需主动告知即可。</p><h3>生活信条</h3><p>爱好：编程、写作、观影、探索未知、独处深耕</p><p>人生信条：<strong>在有限的认知里，拓展无限的可能——做个明白人。</strong></p><h2>八、联系方式</h2><p>📧 邮箱：qiaoshuo [AT] gmail.com</p><h2>（非即时回复，所有邮件必阅必回）</h2>    </div>
+    <div style="margin‑top:30px">
+        标签：<a href="https://cms.qsis.cn/tag/isher/index.html">isher</a> <a href="https://cms.qsis.cn/tag/qiaoshuo/index.html">qiaoshuo</a> <a href="https://cms.qsis.cn/tag/作者/index.html">作者</a> <a href="https://cms.qsis.cn/tag/程序员/index.html">程序员</a> <a href="https://cms.qsis.cn/tag/全栈工程师/index.html">全栈工程师</a> <a href="https://cms.qsis.cn/tag/Qsis主理人/index.html">Qsis主理人</a>    </div>
+</div>
+<!-- footer -->
+<footer class="site-footer">
+    <div class="container">
+        <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://cms.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
+        <p>&copy; 2016 - 2026 . Powered by QSIS‑SSG.</p>
     </div>
-  </div>
-</div>
-
-<!-- 底部 -->
-<!-- 底部 -->
-
-<div class="friend-link">
-  <div class="container">
-  	 <h3 class="list-title">链接</h3>
-<div class="friend-links">
-
-<a href="https://d.qsis.cn/" target="_blank">Qsis下载器</a><a href="https://ruiyarisheng.com" target="_blank">瑞雅日盛装饰</a><a href="http://game.qsis.cn" target="_blank">骑士游戏</a><a href="http://www.npc.gov.cn/" target="_blank">人民代表大会</a><a href="https://qsis.cn" target="_blank">Qsis.cn</a><a href="https://flk.npc.gov.cn/" target="_blank">国家法律法规数据库</a><a href="https://www.gov.cn/zhengce/xxgk/gjgzk/index.htm" target="_blank">国家规章库</a><a href="https://www.gsxt.gov.cn/" target="_blank">国家企业信用信息公示系统</a><a href="https://ailegal.baidu.com/" target="_blank">法律AI法行宝</a><a href="https://ssl.leguard.cn" target="_blank">SSL证书</a><a href="https://pdc.capub.cn/" target="_blank">ISBN图书查询</a></div>
-</div>
-
-<div class="footer">
-	
-	
-  <div class="container">
-    <p><a href="https://swbj.qsis.cn" target="_blank">深悟笔记官方网站</a> <a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://swbj.qsis.cn/qsis.html" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a><a href="https://swbj.qsis.cn//verify.qsis.cn:88/" target="_blank">程序下载</a></p>
-    <p>&copy; 2026 . Powered by QSIS-SSG.</p>
-  </div>
-</div>
-
-
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.qrcode@1.0.3/jquery.qrcode.min.js"></script>
-
-
-<script>
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const curr = document.getElementById('curr')
-let page = 1
-const max = 3
-
-function update(){
-  prev.disabled = page === 1
-  next.disabled = page === max
-  curr.textContent = page
-}
-
-prev.onclick = () => { page--; update() }
-next.onclick = () => { page++; update() }
-update()
-</script>
-<script>
-// 加载搜索索引
-let searchIndex = [];
-
-async function loadSearchIndex() {
-  try {
-    const res = await fetch('/search-index.json');
-    searchIndex = await res.json();
-    console.log(`已加载 ${searchIndex.length} 篇文章用于搜索`);
-  } catch (err) {
-    console.error('搜索索引加载失败', err);
-  }
-}
-
-// 执行搜索
-function doSearch(keyword) {
-  const resultBox = document.getElementById('search-result');
-  resultBox.innerHTML = '';
-
-  if (!keyword.trim()) {
-    return;
-  }
-
-  const kw = keyword.toLowerCase();
-  const matched = searchIndex.filter(item => {
-    const title = (item.title || '').toLowerCase();
-    const content = (item.content || '').toLowerCase();
-    return title.includes(kw) || content.includes(kw);
-  });
-
-  if (matched.length === 0) {
-    resultBox.innerHTML = '<div class="no-result">没有找到相关文章</div>';
-    return;
-  }
-
-  let html = '';
-  matched.forEach(item => {
-    html += `
-<div class="search-item">
-  <a href="${item.url}" target="_blank">${item.title}</a>
-  <div class="desc">${item.content.substring(0, 120)}...</div>
-</div>
-    `;
-  });
-
-  resultBox.innerHTML = html;
-}
-
-// 初始化
-document.addEventListener('DOMContentLoaded', () => {
-  loadSearchIndex();
-
-  const input = document.getElementById('search-input');
-  input.addEventListener('input', e => {
-    doSearch(e.target.value);
-  });
-});
-</script>
-<script>
-$(function(){
-    $('.qrcode').each(function(){
-        $(this).qrcode({
-            text: $(this).data('url'),
-            width: 100,
-            height: 100,
-            draw: false  
-        });
-    });
-});
-</script>
+</footer>
 </body>
-</html><script>
-var speechSynthesisInstance = null;
-var isPlaying = false;
-var content = '';
-var rateControl = 1;
-var currentSentenceIndex = 0;
-var sentences = [];
-
-document.addEventListener('DOMContentLoaded', function () {
-    content = document.getElementById('article-content').innerText;
-    sentences = content.split(/([。！\?；])/).filter(Boolean);
-
-    document.getElementById('toggle-speech').addEventListener('click', toggleSpeech);
-
-    document.getElementById('rate-control').addEventListener('input', function (e) {
-        rateControl = e.target.value;
-        document.getElementById('rate-value').innerText = rateControl;
-        if (speechSynthesisInstance) {
-            speechSynthesisInstance.rate = rateControl;
-            if (isPlaying) {
-                speechSynthesis.cancel();
-                speechSynthesis.speak(speechSynthesisInstance);
-            }
-        }
-    });
-
-    startWebSpeechAPI();
-});
-
-function toggleSpeech() {
-    if (isPlaying) {
-        pauseSpeech();
-    } else {
-        playSentence();
-    }
-}
-
-function playSentence() {
-    var sentence = sentences[currentSentenceIndex];
-    var utterance = new SpeechSynthesisUtterance(sentence);
-    utterance.lang = 'zh-CN';
-    utterance.rate = rateControl;
-
-    utterance.onend = function() {
-        currentSentenceIndex++;
-        if (currentSentenceIndex < sentences.length) {
-            playSentence();
-        } else {
-            isPlaying = false;
-            document.getElementById('toggle-speech').innerText = '▶️';
-        }
-    };
-
-    speechSynthesisInstance = utterance;
-    speechSynthesis.speak(utterance);
-    isPlaying = true;
-    document.getElementById('toggle-speech').innerText = '⏸️';
-}
-
-function pauseSpeech() {
-    isPlaying = false;
-    document.getElementById('toggle-speech').innerText = '▶️';
-    speechSynthesis.cancel();
-}
-
-function startWebSpeechAPI() {
-    if (sentences.length > 0 && !isPlaying) {
-        document.getElementById('toggle-speech').innerText = '▶️';
-    }
-}
-</script>
+</html>
