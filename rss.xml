@@ -5,7 +5,7 @@
 <link>https://cms.qsis.cn/</link>
 <description>这里是全势•QsisCms内容管理系统的官方网站</description>
 <language>zh-cn</language>
-<lastBuildDate>Fri, 28 Aug 2026 07:17:12 +0800</lastBuildDate>
+<lastBuildDate>Fri, 28 Aug 2026 08:43:09 +0800</lastBuildDate>
 <atom:link href="https://cms.qsis.cn/rss.xml" rel="self" type="application/rss+xml" />
 <item>
 <title>QsisCMS 实战搭建｜一套文件式静态生成 CMS，打造你的独立自媒体站点</title>
@@ -15,7 +15,7 @@
 <description><p>如果你厌倦了 MySQL 数据库频繁维护、WordPress 臃肿卡顿，又想要可以自主可控、一键生成静态站点、推送到 GitHub‑Pages 托管的建站方案，QsisCMS会是一个非常有特色的轻量选择。本文基于后台实操界面，完整分享落地实战经验。</p><p>QsisCMS 是一款基于 PHP 开发、以文件存储...</p><p><strong><a href="https://cms.qsis.cn/article/f6cbzw.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
 </item>
 <item>
-<title>第一篇：Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线）</title>
+<title>Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线）</title>
 <link>https://cms.qsis.cn/article/g2wcjg.html</link>
 <guid>https://cms.qsis.cn/article/g2wcjg.html</guid>
 <pubDate>Fri, 28 Aug 2026 00:00:00 +0800</pubDate>

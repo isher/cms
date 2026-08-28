@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cms.qsis.cn/404.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/article/56zc1w.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/article/page/2/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/article/qk6hd2.html</loc>
@@ -34,15 +34,23 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/contact.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cms.qsis.cn/features.html</loc>
+    <lastmod>2026-08-28T08:41:09+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cms.qsis.cn/features.html.html</loc>
+    <lastmod>2026-08-28T08:37:52+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/helloQsis.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:43:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/jiehuo.html.html</loc>
@@ -50,7 +58,7 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/liuyan.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/qiaoshuo.html</loc>
@@ -58,7 +66,7 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/qsiscms.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/search.html</loc>
@@ -74,23 +82,23 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/tag/QsisCms安装部署/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:41:34+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/tag/QsisCms管理/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:41:34+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/tag/实战案例/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:41:34+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/tag/更新快讯/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:41:34+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/tags/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:34:35+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/ty.html</loc>
@@ -98,7 +106,7 @@
   </url>
   <url>
     <loc>https://cms.qsis.cn/upload/index.html</loc>
-    <lastmod>2026-08-28T07:17:12+08:00</lastmod>
+    <lastmod>2026-08-28T08:43:09+08:00</lastmod>
   </url>
   <url>
     <loc>https://cms.qsis.cn/v.html</loc>

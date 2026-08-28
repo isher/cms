@@ -7,6 +7,8 @@ https://cms.qsis.cn/article/hv6cto.html
 https://cms.qsis.cn/article/page/2/index.html
 https://cms.qsis.cn/article/qk6hd2.html
 https://cms.qsis.cn/contact.html
+https://cms.qsis.cn/features.html
+https://cms.qsis.cn/features.html.html
 https://cms.qsis.cn/helloQsis.html
 https://cms.qsis.cn/index.html
 https://cms.qsis.cn/jiehuo.html.html
