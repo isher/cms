@@ -30,22 +30,6 @@
     "ads_config_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
     "qc_config_file_hash": "488695a6e6c36a614613d310fea25e6fdf7b342f6fe51a65f750ab59b3d922a5",
     "static_config_file_hash": "80699d9ea6928742af6bd8d44b56741a0299b9955cc208873fc1c492c24cba62",
-    "refresh_categories": [
-        "article",
-        "page",
-        "page",
-        "page",
-        "page",
-        "page",
-        "page",
-        "page",
-        "page"
-    ],
-    "refresh_tags": {
-        "0": "实战案例",
-        "1": "QsisCms安装部署",
-        "2": "QsCMS",
-        "3": "QsisCms管理",
-        "8": "更新快讯"
-    }
+    "refresh_categories": [],
+    "refresh_tags": []
 }

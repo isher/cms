@@ -415,9 +415,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .logo-strip .logos span:hover { color: var(--n-700); }
 
-.ql-align-center  { 
-	    text-align: center;
-	}
 
 /* ============================================================
    Sections
@@ -873,7 +870,16 @@ img { max-width: 100%; height: auto; display: block; }
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     color: var(--text-secondary);
 }
-.article-content img { border-radius: var(--radius-md); margin: 1.5rem 0; }
+.article-content img {
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .article-tags {
     margin-top: 48px;
     padding-top: 24px;
