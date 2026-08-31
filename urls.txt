@@ -9,4 +9,5 @@ https://cms.qsis.cn/contact.html
 https://cms.qsis.cn/features.html
 https://cms.qsis.cn/helloQsis.html
 https://cms.qsis.cn/liuyan.html
+https://cms.qsis.cn/privacy-cn.html.html
 https://cms.qsis.cn/qsiscms.html

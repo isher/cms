@@ -12,6 +12,7 @@
         "features": "206493f8e1ee81f8124464d59c6bfb935ea10fdbb16816405e2d46396a314f2e",
         "helloQsis": "efa3e4ff09bd352fadee4f4040d4b354b68fa51c6cccec031fb8654582a58c91",
         "liuyan": "19ca0d0ef86c3b8e966f2244b4079f23e6a8fd75da5596a9d075b7f9756b413c",
+        "privacy-cn.html": "1c6f29549d828772bd073f4dc67b963eda7849e34eb581fef49fd6baa9c8c00f",
         "qsiscms": "3f7c867d5c8d8755387771987ea38890cd300bfe202acb830fdf111d3b369147"
     },
     "template_hash": {
@@ -23,6 +24,23 @@
         "tags": "f65319dee8b4a1d2dc508ee55c280427c56e7a577f4596d735e896d3484c2bae",
         "404": "8104b94fc0863170fa762d5e97ab99f0fe3dff69df4f1d9c925e5b5695f8ce93"
     },
-    "refresh_categories": [],
-    "refresh_tags": []
+    "ads_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
+    "ads_config_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
+    "qc_config_file_hash": "403a478a50d6835e3fea87aceff8b0c21737715abdf71048646d4b8a0cf26ebd",
+    "static_config_file_hash": "c1eeaf5ad3f3e1ffcee2944dcaa44a7cd65eaa309eb46f5b1438a4ba5ee32264",
+    "refresh_categories": [
+        "article",
+        "page",
+        "page",
+        "page",
+        "page",
+        "page",
+        "page"
+    ],
+    "refresh_tags": {
+        "0": "实战案例",
+        "1": "QsisCms安装部署",
+        "2": "QsisCms管理",
+        "6": "更新快讯"
+    }
 }

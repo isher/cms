@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>QsisCms内容管理系统</title>
+<title>QsisCm全势内容管理系统</title>
 <link>https://cms.qsis.cn/</link>
-<description>这里是全势•QsisCms内容管理系统的官方网站</description>
+<description>这里是全势QsisCms内容管理系统的官方网站,轻松一键搭建权势CMS内容管理平台，写博客，写文章，写小说，写程序开发日志，写流程，得心应手，还能一键SSG生成静态，收录更随心。</description>
 <language>zh-cn</language>
-<lastBuildDate>Fri, 28 Aug 2026 08:46:25 +0800</lastBuildDate>
+<lastBuildDate>Mon, 31 Aug 2026 11:42:28 +0800</lastBuildDate>
 <atom:link href="https://cms.qsis.cn/rss.xml" rel="self" type="application/rss+xml" />
 <item>
 <title>QsisCMS 实战搭建｜一套文件式静态生成 CMS，打造你的独立自媒体站点</title>
 <link>https://cms.qsis.cn/article/f6cbzw.html</link>
 <guid>https://cms.qsis.cn/article/f6cbzw.html</guid>
 <pubDate>Fri, 28 Aug 2026 00:00:00 +0800</pubDate>
-<description><p>如果你厌倦了 MySQL 数据库频繁维护、WordPress 臃肿卡顿，又想要可以自主可控、一键生成静态站点、推送到 GitHub‑Pages 托管的建站方案，QsisCMS会是一个非常有特色的轻量选择。本文基于后台实操界面，完整分享落地实战经验。</p><p>QsisCMS 是一款基于 PHP 开发、以文件存储...</p><p><strong><a href="https://cms.qsis.cn/article/f6cbzw.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
+<description><p>如果你厌倦了 MySQL 数据库频繁维护、WordPress 臃肿卡顿，又想要可以自主可控、一键生成静态站点、推送到 GitHub‑Pages 托管的建站方案，QsisCMS会是一个非常有特色的轻量选择。本文基于后台实操界面，完整分享落地实战经验。</p><p>QsisCMS 是一款基于 PHP 开发、以文件存储...</p><p><strong><a href="https://cms.qsis.cn/article/f6cbzw.html" target="_blank">点击进入QsisCm全势内容管理系统阅读全文</a></strong></p></description>
 </item>
 <item>
 <title>Qsis CMS 零基础完整部署实战教程（无数据库·纯文件部署上线）</title>
 <link>https://cms.qsis.cn/article/g2wcjg.html</link>
 <guid>https://cms.qsis.cn/article/g2wcjg.html</guid>
 <pubDate>Fri, 28 Aug 2026 00:00:00 +0800</pubDate>
-<description><p>很多新手在接触 Qsis CMS 时，容易被传统CMS思维误导，误以为需要数据库部署，实际Qsis CMS 是纯文件存储、零数据库依赖的轻量化内容管理系统，无需MySQL、MariaDB等数据库服务，部署极简、低配置服务器秒开。本文基于Linux CentOS7/8、Ubuntu主流服务器，提供一套...</p><p><strong><a href="https://cms.qsis.cn/article/g2wcjg.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
+<description><p>很多新手在接触 Qsis CMS 时，容易被传统CMS思维误导，误以为需要数据库部署，实际Qsis CMS 是纯文件存储、零数据库依赖的轻量化内容管理系统，无需MySQL、MariaDB等数据库服务，部署极简、低配置服务器秒开。本文基于Linux CentOS7/8、Ubuntu主流服务器，提供一套...</p><p><strong><a href="https://cms.qsis.cn/article/g2wcjg.html" target="_blank">点击进入QsisCm全势内容管理系统阅读全文</a></strong></p></description>
 </item>
 <item>
 <title>察使对方啊手动阀安丰士大夫</title>
@@ -33,21 +33,21 @@
 <link>https://cms.qsis.cn/article/fkwx2p.html</link>
 <guid>https://cms.qsis.cn/article/fkwx2p.html</guid>
 <pubDate>Sat, 11 Jul 2026 00:00:00 +0800</pubDate>
-<description><p>QsisCms 高级设置板块迎来两项重要更新。</p><p></p><p><strong><a href="https://cms.qsis.cn/article/fkwx2p.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
+<description><p>QsisCms 高级设置板块迎来两项重要更新。</p><p></p><p><strong><a href="https://cms.qsis.cn/article/fkwx2p.html" target="_blank">点击进入QsisCm全势内容管理系统阅读全文</a></strong></p></description>
 </item>
 <item>
 <title>QsisCms 更新快讯：新增系统日志能力，覆盖登录日志与操作日志</title>
 <link>https://cms.qsis.cn/article/56zc1w.html</link>
 <guid>https://cms.qsis.cn/article/56zc1w.html</guid>
 <pubDate>Tue, 23 Jun 2026 00:00:00 +0800</pubDate>
-<description><p>QsisCms「高级功能」板块再上新功能，现已加入系统日志模块。 日志包含两大记录维度：登录日志与操作日志。 登录日志可以追溯后台账号的登录时间、登录行为；操作日志则记录后台各项配置改动、内容编辑等管理员操作轨迹。 搭配原有备份邮件日志查询、存储目录变更、GitHub‑Pages 开关等运维选项，站...</p><p><strong><a href="https://cms.qsis.cn/article/56zc1w.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
+<description><p>QsisCms「高级功能」板块再上新功能，现已加入系统日志模块。 日志包含两大记录维度：登录日志与操作日志。 登录日志可以追溯后台账号的登录时间、登录行为；操作日志则记录后台各项配置改动、内容编辑等管理员操作轨迹。 搭配原有备份邮件日志查询、存储目录变更、GitHub‑Pages 开关等运维选项，站...</p><p><strong><a href="https://cms.qsis.cn/article/56zc1w.html" target="_blank">点击进入QsisCm全势内容管理系统阅读全文</a></strong></p></description>
 </item>
 <item>
 <title>QsisCms 更新快讯：原开发人员模式升级为高级功能</title>
 <link>https://cms.qsis.cn/article/hv6cto.html</link>
 <guid>https://cms.qsis.cn/article/hv6cto.html</guid>
 <pubDate>Fri, 05 Jun 2026 00:00:00 +0800</pubDate>
-<description><p><strong><a href="https://cms.qsis.cn/article/hv6cto.html" target="_blank">点击进入QsisCms内容管理系统阅读全文</a></strong></p></description>
+<description><p><strong><a href="https://cms.qsis.cn/article/hv6cto.html" target="_blank">点击进入QsisCm全势内容管理系统阅读全文</a></strong></p></description>
 </item>
 </channel>
 </rss>

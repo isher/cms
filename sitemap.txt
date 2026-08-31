@@ -13,6 +13,7 @@ https://cms.qsis.cn/helloQsis.html
 https://cms.qsis.cn/index.html
 https://cms.qsis.cn/jiehuo.html.html
 https://cms.qsis.cn/liuyan.html
+https://cms.qsis.cn/privacy-cn.html.html
 https://cms.qsis.cn/qiaoshuo.html
 https://cms.qsis.cn/qsiscms.html
 https://cms.qsis.cn/search.html
