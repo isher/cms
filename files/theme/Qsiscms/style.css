@@ -415,6 +415,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .logo-strip .logos span:hover { color: var(--n-700); }
 
+.ql-align-center  { 
+	    text-align: center;
+	}
+
 /* ============================================================
    Sections
    ============================================================ */

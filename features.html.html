@@ -2,15 +2,15 @@
 <html lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>功能特性 - QsisCms内容管理系统</title>
+    <title>功能特性 - QsCms全势内容管理系统</title>
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="https://cms.qsis.cn/features.html.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsisCms内容管理系统 RSS订阅">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsCms全势内容管理系统 RSS订阅">
 <meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
-<meta name="description" content="这里是全势•QsisCms内容管理系统的官方网站">
+<meta name="description" content="全开源的QsCms(原QsisCms)内容管理系统的官方网站,轻松一键搭建权势CMS内容管理平台，写博客，写文章，写小说，写程序开发日志，写流程，得心应手，还能一键SSG生成静态，收录更随心。">
 	    <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +52,7 @@
 <header class="site-header" id="siteHeader">
     <div class="container">
         <div class="brand">
-            <a href="https://cms.qsis.cn">QsisCms内容管理系统</a>
+            <a href="https://cms.qsis.cn">QsCms全势内容管理系统</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="菜单">
             <span></span><span></span><span></span>
@@ -98,8 +98,9 @@ mainNav.querySelectorAll('a').forEach(function(link){
     </nav>
 
     <!-- 文章标题 -->
-    <h1 class="article-title">功能特性</h1>
-
+    <div class="article-title">
+    	<h1 class="article">功能特性</h1>
+    </div>
     <!-- 文章元信息 -->
     <div class="article-meta">
         <span class="meta-item">
@@ -109,10 +110,9 @@ mainNav.querySelectorAll('a').forEach(function(link){
         <span class="meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     </span>
-            </div>
+    </div>
 
-    <!-- 封面图 -->
-    
+
     <!-- 正文内容区 -->
     <div class="article-content">
         <h2>QsisCMS 核心功能特性</h2><p>QsisCMS 是一款轻量、高效、无数据库的自研 SSG 静态内容管理系统，专为博客、文档站、资讯站点、个人官网打造。摒弃传统动态程序的冗余负担，以<strong>纯文件静态生成</strong> 为核心，兼顾极简运维、极致访问速度与专业 SEO 能力，支持一键 Git 自动部署，开箱即用、自由扩展。</p><h3>一、无库极简架构，轻量零负担</h3><p>系统全程不依赖 MySQL、SQLite 等任何数据库，所有文章、配置、分类、标签数据均以文件形式本地存储。架构极简、部署零门槛，全站无动态读写请求，彻底杜绝数据库崩溃、注入攻击、数据丢失等问题。站点迁移、备份、克隆仅需复制文件夹，新手也能轻松运维。</p><h3>二、SSG 全静态生成，访问极速高效</h3><p>采用主流静态站点生成方案，后台编辑内容后一键生成纯静态 HTML 页面。相较于 PHP、Java 等动态程序，页面无需后端渲染，浏览器直接加载，访问速度大幅提升，极低服务器负载，高并发场景稳定不卡顿，完美适配各类主机、静态托管平台。</p><h3>三、智能增量构建，发布高效省时</h3><p>内置精准增量构建机制，系统自动比对文件缓存与磁盘文件差异，<strong>仅重新生成修改、新增的页面</strong>，无需全站重复构建。大幅缩短发布耗时，海量文章场景下依旧可以实现秒级更新，告别传统全站重构的低效问题。同时兼容全量强制构建模式，一键重置全站静态资源。</p><h3>四、Markdown 极简创作，专注内容本身</h3><p>原生支持 Markdown 语法编辑创作，适配标题、列表、代码块、引用、加粗、斜体等常用格式，支持代码高亮、图文混排。后台编辑器清爽无冗余功能，让创作者专注内容撰写，无需复杂排版操作，同时支持文章批量导入、导出，内容迁移灵活便捷。</p><h3>五、全套站点生态，自带完整能力</h3><p>系统内置全站配套资源自动生成能力，无需手动配置开发，开箱即用：</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>自动生成 <strong>Sitemap 站点地图</strong>、<strong>RSS 订阅源</strong>，适配搜索引擎与订阅场景</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>自动生成全站搜索索引文件，支持站内全文搜索功能</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>自动生成分类列表页、标签列表页，支持分页展示</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>自动生成标准化 404 错误页面、站点链接清单 urls.txt</li></ol><h3>六、专业 SEO 优化，助力收录排名</h3><p>深度适配搜索引擎优化规则，内置全套 SEO 能力，助力站点快速收录、稳定排名：</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>支持 IndexNow 主动推送，页面更新后自动推送至搜索引擎，大幅提升收录效率</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>内置 Canonical 标准化链接标签，规避重复页面权重分散问题</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>支持后台可视化编辑 robots.txt，自由管控爬虫抓取规则</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>页面元数据独立可控，发布时间、摘要、关键词精准配置</li></ol><h3>七、一键 Git 自动部署，无缝托管发布</h3><p>内置成熟 GitHub 同步部署模块，支持增量上传、全量强制上传双模式，后台一键触发全站推送，无缝适配 GitHub Pages 静态托管。内置任务锁机制，防止多并发推送冲突，全程日志可视化输出，每一次发布均可追溯，彻底告别手动上传、手动推送的繁琐操作。</p><h3>八、灵活模板引擎，自由定制样式</h3><p>采用内容与模板分离设计，模板文件完全开源可编辑。用户可自由修改页面布局、配色、导航、页脚、首页样式，支持自定义主题模板，无需改动核心程序代码，即可实现站点外观全方位定制，适配个人、企业、文档站等各类场景。</p><h3>九、完善后台管理，运维便捷可控</h3><p>配套可视化管理后台，功能全面、操作简洁：</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>文章全流程管理：新增、编辑、删除、批量管理、内容预览</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>站点全局配置：站点信息、静态地址、托管密钥、推送规则配置</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>权限管控：多管理员权限分配，精细化操作权限区分</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>操作日志审计：记录每一次发布、配置修改行为，全程可追溯</li></ol><h3>十、高可扩展设计，适配多元场景</h3><p>系统源码完全自主可控，无厂商锁定、无加密冗余，支持二次开发。内置跨站同步接口，支持多站点内容互通，适配多语言站点搭建、专题页面拓展、自定义功能开发，可灵活适配个人博客、企业官网、技术文档站、资讯小型站点等各类使用场景。</p><h3>总结</h3><p>QsisCMS 以 <strong>轻量、稳定、高效、开源、免数据库</strong> 为核心优势，兼顾新手易用性与开发者拓展性，一站式解决静态站点搭建、创作、优化、部署全流程需求，是极简建站、轻量化内容运营的优质解决方案。</p>    </div>
@@ -161,7 +161,7 @@ mainNav.querySelectorAll('a').forEach(function(link){
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <span class="brand-name">QsisCms内容管理系统</span>
+                <span class="brand-name">QsCms全势内容管理系统</span>
                 <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
             </div>
             <div class="footer-col">
@@ -192,8 +192,132 @@ mainNav.querySelectorAll('a').forEach(function(link){
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2016 - 2026 QsisCms内容管理系统. Powered by QSIS-SSG.</p>
-            <p><a href=http://beian.qsis.cn>京ICP备2021005632号</a> Powerby <a href="https://cms.qsis.cn" target="_blank">QsisCMS. Designed & Diveloped by <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">isher</a></p>
+            <p>&copy; 2016 - 2026 QsCms全势内容管理系统. Powered by QSIS-SSG.</p>
+            <p>Copyright©2016‑2026.　All Rights Reserved.
+<a href=http://beian.qsis.cn>京ICP备2021005632号</a> <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
+<a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
+<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>
+
+<style>
+/* Cookie弹窗 底部滑入 */
+#cookieConsentWrap{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:16px;
+    background:#ffffff;
+    box-shadow:0 -2px 14px rgba(0,0,0,0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+#cookieConsentWrap.show{
+    transform: translateY(0);
+}
+.cookie-inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+.cookie-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 8px 0;
+}
+.cookie-desc{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin:0 0 14px 0;
+}
+.cookie-desc a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.cookie-btn{
+    padding:9px 20px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.btn-accept{
+    background:#222;
+    color:#fff;
+}
+.btn-reject{
+    background:#eeeeee;
+    color:#333;
+}
+</style>
+
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-title">Cookie 使用提示</div>
+        <div class="cookie-desc">
+            本站使用Cookie用于网站体验优化与谷歌广告投放。继续使用网站即代表您同意相关技术。您可以查阅<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>了解详情，也可随时在浏览器设置关闭Cookie。
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptCookie">全部同意</button>
+            <button class="cookie-btn btn-reject" id="rejectCookie">拒绝非必要Cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Google Consent Mode v2 适配，AdSense合规
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+const consentKey = "site_cookie_consent";
+const banner = document.getElementById('cookieConsentWrap');
+const acceptBtn = document.getElementById('acceptCookie');
+const rejectBtn = document.getElementById('rejectCookie');
+
+//读取本地保存的选择
+let saved = localStorage.getItem(consentKey);
+
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
+    banner.classList.remove('show');
+}
+
+if(!saved){
+    //没有做过选择，弹出底部弹窗
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    //初始化默认拒绝广告存储
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+}
+
+acceptBtn.onclick = function(){
+    setConsent('granted','granted');
+};
+rejectBtn.onclick = function(){
+    setConsent('denied','denied');
+};
+</script></p>
         </div>
     </div>
 </footer>

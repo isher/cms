@@ -10,14 +10,16 @@
     "pages_file_hash": {
         "contact": "86f3d8380c9b2ada85e0a10202cc165e7ca5f2775a0d2b55dd36c94b5c565dcd",
         "features": "206493f8e1ee81f8124464d59c6bfb935ea10fdbb16816405e2d46396a314f2e",
+        "features.html": "206493f8e1ee81f8124464d59c6bfb935ea10fdbb16816405e2d46396a314f2e",
         "helloQsis": "efa3e4ff09bd352fadee4f4040d4b354b68fa51c6cccec031fb8654582a58c91",
         "liuyan": "19ca0d0ef86c3b8e966f2244b4079f23e6a8fd75da5596a9d075b7f9756b413c",
         "privacy-cn.html": "1c6f29549d828772bd073f4dc67b963eda7849e34eb581fef49fd6baa9c8c00f",
+        "qiaoshuo": "1a0114678fa65e1197f30def9c5065ce1db52281f9632dc64e1b7e17a76cf1ce",
         "qsiscms": "3f7c867d5c8d8755387771987ea38890cd300bfe202acb830fdf111d3b369147"
     },
     "template_hash": {
         "index": "09e67d174331a1cac174d8e95798b05366cf1f7a455ec380b47dcfe429934d69",
-        "post": "c2f59624234636539370199ee66da4faf0069c822a0931fb726a48b21d6eb77a",
+        "post": "0cca7a8783098029327eb6035d26169bafa442ade0d3df4a7c4eb6350769d7aa",
         "header": "e57fdd74dc11bb90dac37b0b38c3ab42069c76543e22a3f7444b0d66755c4414",
         "footer": "65ff28525cf01836a2b8513a139c251d466e484eff3ecd212cd34071185e6872",
         "list": "c9f4e5e54218827ebc4ee63edcb5241d4ccf71dfc79bd517991e92febe5934aa",
@@ -26,10 +28,12 @@
     },
     "ads_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
     "ads_config_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
-    "qc_config_file_hash": "c88b075ec05e115558e216667c38ea57f8651d266780fc839203b76bba037724",
+    "qc_config_file_hash": "488695a6e6c36a614613d310fea25e6fdf7b342f6fe51a65f750ab59b3d922a5",
     "static_config_file_hash": "80699d9ea6928742af6bd8d44b56741a0299b9955cc208873fc1c492c24cba62",
     "refresh_categories": [
         "article",
+        "page",
+        "page",
         "page",
         "page",
         "page",
