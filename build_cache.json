@@ -1,7 +1,7 @@
 {
     "posts_file_hash": {
-        "f6cbzw": "f73b4656227112f997d20c3c2825eabaffe521b679f3d53cd237e6b539958d4d",
-        "g2wcjg": "3dcbbddd8b195188228224a502e8bc4d4dfc2a7560e79f8929ccf3ee58002933",
+        "f6cbzw": "ff6e7338115a1c3a375d053ef1a2ccdcab9ffa5b899e641e15e68ee7c8606bc3",
+        "g2wcjg": "78a60b3b58aa5192e321f29c49e355b4bb0150aff11a7685eb93f79b2f8c955c",
         "qk6hd2": "3a7d30c461e9522cf9f3342ee7eda86d213d61cf4f0af2911771992288385ca7",
         "fkwx2p": "f09aef9f2c1d98167fc1f696caa14ac94bcbaf4eee7f84ee3e8d71440661e45a",
         "56zc1w": "d7efef27d5dd536efb88b40e273409d8419abcc1af2e7cf9e8879b3f116912d3",
@@ -26,8 +26,8 @@
     },
     "ads_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
     "ads_config_file_hash": "757b096e109a5411a91d505d385d501d0f5cc003df0bbb9e3b506eb67a3f0854",
-    "qc_config_file_hash": "403a478a50d6835e3fea87aceff8b0c21737715abdf71048646d4b8a0cf26ebd",
-    "static_config_file_hash": "c1eeaf5ad3f3e1ffcee2944dcaa44a7cd65eaa309eb46f5b1438a4ba5ee32264",
+    "qc_config_file_hash": "c88b075ec05e115558e216667c38ea57f8651d266780fc839203b76bba037724",
+    "static_config_file_hash": "80699d9ea6928742af6bd8d44b56741a0299b9955cc208873fc1c492c24cba62",
     "refresh_categories": [
         "article",
         "page",
@@ -40,7 +40,8 @@
     "refresh_tags": {
         "0": "实战案例",
         "1": "QsisCms安装部署",
-        "2": "QsisCms管理",
-        "6": "更新快讯"
+        "2": "QsCMS",
+        "3": "QsisCms管理",
+        "8": "更新快讯"
     }
 }

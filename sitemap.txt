@@ -19,6 +19,7 @@ https://cms.qsis.cn/qsiscms.html
 https://cms.qsis.cn/search.html
 https://cms.qsis.cn/service.html
 https://cms.qsis.cn/shenwubiji.html
+https://cms.qsis.cn/tag/QsCMS/index.html
 https://cms.qsis.cn/tag/QsisCms安装部署/index.html
 https://cms.qsis.cn/tag/QsisCms管理/index.html
 https://cms.qsis.cn/tag/实战案例/index.html
