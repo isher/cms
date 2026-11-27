@@ -1,15 +1,16 @@
-# QScms 官网（cms.qsis.cn）
+# c.qsis.cn — QScms 官网
 
 QScms / Qsiscms 的产品官网，纯静态站，托管在 GitHub Pages，自定义域名 `cms.qsis.cn`。
 
-它是**独立项目**，不属于 QScms 程序本体：产品代码只管程序，官网只管站点。以前官网页面是塞在 QScms 仓库 `tools/` 里跑的，改得越多越容易互相污染，所以拆出来单独维护。
+项目名与本地目录统一用站点域名 `c.qsis.cn`。它是**独立项目**，不属于 QScms 程序本体：产品代码只管程序，官网只管站点。以前官网页面是塞在 QScms 仓库 `tools/` 里跑的，改得越多越容易互相污染，所以拆出来单独维护。
 
 ## 本地环境
 
 | 项 | 值 |
 |---|---|
-| 源码目录 | `G:/GitHub/CMS/qscms-site`（本仓库） |
+| 源码目录 | `G:/GitHub/CMS/c.qsis.cn`（本仓库） |
 | 本地访问 | http://127.0.0.1:1112/ |
+| 线上地址 | https://cms.qsis.cn/ |
 | 虚拟主机 | `G:/xampp/apache/conf/extra/httpd-vhosts.conf` 中 `*:1112`，`Listen 1112` 在 `httpd.conf` |
 | 发布方式 | `git push` 到 `main`，GitHub Pages 自动构建，约 1 分钟后生效 |
 
