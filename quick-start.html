@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>快速开始 - QsCms全势内容管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://cms.qsis.cn/quick-start.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsCms全势内容管理系统 RSS订阅">
+<meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
+<meta name="description" content="QScms 快速开始：环境要求、上传部署、安装向导四步、装完必做事项、Apache 与 Nginx 伪静态配置、常见报错处理。">
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site" content="https://cms.qsis.cn">
+    <meta property="og:image" content="/upload/images/favicon.ico">
+<link rel="stylesheet" href="https://cms.qsis.cn/files/theme/Qsiscms/style.css">
+    <!--
+           这是来自于本站开发的自有程序。尚未开源
+                              _.._        ,----------.
+                           ,'      `.    ( 就知道扒皮 )
+                          /  __) __` \    `-,-------'
+                         (  (`-`(-')  ) _.-'
+                         /)  \  = /  (
+                        /'    |--' .  \
+                       (  ,---|  `-.)__`
+                        )(  `-.,--'   _`-.
+                       '/,'          (    ",
+                        (_       ,    `/,-' )
+                        `.__,  : `-'/  /`--'
+                          |     `--'  |
+                          `   `-._   /
+                           \        (
+                           /\ .      \. 
+                          / |` \     ,-\
+                         /  \| .)   /   \
+                        ( ,'|\    ,'     :
+                        | \,`.`--"/      }
+                        `,'    \  |,'    /
+                       / "-._   `-/      |
+                       "-.   "-.,'|     ;
+                      /        _/["---'""]
+                     :        /  |"-     '
+                     '           |      /
+                                 `      |
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body>
+<!-- 导航栏 -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="brand">
+            <a href="https://cms.qsis.cn">QsCms全势内容管理系统</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn/tag/Qsis/" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/contact.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>            <a href="#" class="nav-cta">免费开始</a>
+        </nav>
+    </div>
+</header>
+<script>
+const headerDom = document.getElementById('siteHeader');
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
+        headerDom.classList.add('header-fixed');
+    } else {
+        headerDom.classList.remove('header-fixed');
+    }
+});
+
+navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    mainNav.classList.toggle('open');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        navToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+    });
+});
+</script>
+<!-- 快速开始 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <span class="eyebrow">Quick Start</span>
+            <h2>快速开始：十分钟从零跑到能发文</h2>
+            <p>QScms 是文件存储，不需要数据库。只要有一个能跑 PHP 的空间，拷进去就能用；跑完这一步，站点即可发文、可一键生成静态站。</p>
+        </div>
+
+        <div class="qs-doc">
+            <h3 id="env">1. 环境准备</h3>
+            <table class="qs-table">
+                <tr><th>项目</th><th>要求</th></tr>
+                <tr><td>PHP</td><td>8.x（8.2 实测最稳），语法按 PHP 8 对待</td></tr>
+                <tr><td>扩展</td><td>mbstring、gd、curl、bcmath、exif、openssl、zip / ZipArchive（ftp 可选，用于 FTP 备份）</td></tr>
+                <tr><td>Web 服务器</td><td>Apache（mod_rewrite + AllowOverride All）或 Nginx + PHP-FPM</td></tr>
+                <tr><td>数据库</td><td><strong>不需要</strong></td></tr>
+                <tr><td>可写目录</td><td>配置与数据目录、上传目录、后台临时与日志目录、备份与静态输出目录</td></tr>
+            </table>
+            <p class="qs-note">目录权限按「目录 755、文件 644」设置，属主为 Web 运行用户即可，不要整站 chmod 777。仓库 <code>scripts/</code> 下有 Linux 与 Windows 的一键权限修复脚本，会自动探测站点根目录与改过名的后台目录。</p>
+
+            <h3 id="upload">2. 上传程序到站点根目录</h3>
+            <p>把发行包解压到站点根目录（虚拟主机的 <code>public_html</code>、VPS 的 <code>/var/www/site</code>、本机 XAMPP 的 <code>C:\xampp\htdocs\qscms</code> 都行）。程序不依赖特定路径，整站拷走即可迁移。</p>
+
+            <h3 id="install">3. 访问站点，安装向导自动启动</h3>
+            <p>浏览器打开站点域名即可。程序检测到没有安装锁文件时会自动跳到安装向导；反过来，想重装就把那把锁删掉再访问。</p>
+            <table class="qs-table">
+                <tr><th>步骤</th><th>做什么</th></tr>
+                <tr><td>1 账号验证</td><td>填写站点账号（邮箱 + 授权码 SN），也可进入手动模式；校验请求只在提交表单时发出</td></tr>
+                <tr><td>2 环境检测</td><td>检查 PHP 版本、扩展、压缩能力、配置目录可写性；缺什么按提示补</td></tr>
+                <tr><td>3 初始化数据</td><td>选择云端恢复已有配置，或手动填写站点名称、描述、地址、后台账号与密码</td></tr>
+                <tr><td>4 完成</td><td>写入安装锁，并提示删除 install 目录、修改后台目录名</td></tr>
+            </table>
+
+            <h3 id="after">4. 装完三件事（不做会留隐患）</h3>
+            <ol class="qs-list">
+                <li><strong>删除或改名整个 install 目录</strong>——留着等于把安装入口挂公网。</li>
+                <li><strong>改后台目录名</strong>——换成 6～10 位无规律名称，然后访问一次「新目录/set.php」，程序会自动记住；不用改代码、不用改配置。扫描器字典里的 /admin/ 从此全部落空，连登录页都摸不到。</li>
+                <li><strong>核对基础设置</strong>——站点地址、主题、友链、时区与语言，用安装时的管理员账号登录后台逐项过一遍。</li>
+            </ol>
+
+            <h3 id="rewrite">5. 伪静态：内页 404 一般都是这里</h3>
+            <p>路由是把路径塞进 query string，所以 <strong>Nginx 必须用 rewrite 形式</strong>，只写 try_files 回退是不够的：</p>
+<pre class="qs-code">location / { try_files $uri $uri/ @qscms; }
+location @qscms { rewrite ^/(.*)$ /index.php?$1 last; }
+location ~ \.php$ {
+    include fastcgi_params;
+    fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}</pre>
+            <p>Apache 只需加载 rewrite_module、站点目录 <code>AllowOverride All</code>，改写规则由自带的 .htaccess 负责。</p>
+
+            <h3 id="first">6. 发第一篇文章，再一键静态化</h3>
+            <ol class="qs-list">
+                <li>后台「文章 → 新建」，填标题、标签、日期，编辑器写正文（可插图库图片），保存为发布或草稿。</li>
+                <li>前台点开文章确认渲染正常，主题样式在「基本参数」里一键切换。</li>
+                <li>后台「静态化」：配置输出路径与站点地址 → 保存 → 生成，检查输出目录里的首页文件。</li>
+                <li>要把静态站放上 CDN 或 GitHub Pages，用静态站部署 / GitHub 同步功能推送，可全量也可增量。</li>
+            </ol>
+
+            <h3 id="faq">7. 几个高频卡点</h3>
+            <table class="qs-table">
+                <tr><th>现象</th><th>怎么处理</th></tr>
+                <tr><td>所有内页 404</td><td>mod_rewrite 没开，或 AllowOverride 不是 All；Nginx 缺 rewrite 规则</td></tr>
+                <tr><td>打开首页跳安装页</td><td>安装锁文件缺失，重新走一遍安装或手工补上锁文件</td></tr>
+                <tr><td>500 / 白屏</td><td>主配置文件损坏或不可读；临时开 display_errors 看具体报错</td></tr>
+                <tr><td>图片上传失败</td><td>上传目录不可写、后缀被扩展名策略拦截、PHP 上传上限太小</td></tr>
+                <tr><td>静态站空或缺页</td><td>静态路径写错、静态主题不存在、生成缓存与源不一致；删缓存后全量重生成</td></tr>
+            </table>
+            <p class="qs-note">更多细节见 <a href="docs/">使用文档</a>；功能清单见 <a href="features.html">功能特性</a>，主题效果见 <a href="themes.html">主题模板</a>。</p>
+        </div>
+    </div>
+</section>
+<style>
+.qs-doc { max-width: 900px; margin: 0 auto; }
+.qs-doc h3 { font-size: 1.15rem; margin: 36px 0 12px; color: var(--n-900); }
+.qs-doc p { color: var(--text-secondary); line-height: 1.85; margin: 0 0 12px; }
+.qs-doc .qs-note { font-size: .92rem; background: var(--bg-soft); border-left: 3px solid var(--c-primary-600); padding: 12px 16px; border-radius: 6px; }
+.qs-table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: .94rem; }
+.qs-table th, .qs-table td { border: 1px solid var(--border-color); padding: 10px 14px; text-align: left; vertical-align: top; }
+.qs-table th { background: var(--bg-soft); font-weight: 600; white-space: nowrap; }
+.qs-list { padding-left: 22px; color: var(--text-secondary); line-height: 1.9; margin: 0 0 14px; }
+.qs-list li { margin-bottom: 6px; }
+.qs-code { background: var(--n-900); color: #e6e6e6; padding: 16px 18px; border-radius: 8px; overflow-x: auto; font-size: .88rem; line-height: 1.7; margin: 12px 0 16px; }
+.qs-doc code { background: var(--bg-soft); padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+.qs-code code { background: none; padding: 0; }
+</style>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">QsCms全势内容管理系统</span>
+                <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/features.html">功能特性</a></li>
+                    <li><a href="https://cms.qsis.cn/docs/">使用文档</a></li>
+                    <li><a href="https://cms.qsis.cn/themes.html">主题模板</a></li>
+                    <li><a href="https://cms.qsis.cn/tag/更新快讯/index.html">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/quick-start.html">快速开始</a></li>
+                    <li><a href="https://cms.qsis.cn/faq.html">常见问题</a></li>
+                    <li><a href="https://cms.qsis.cn/dev-guide.html">开发指南</a></li>
+                    <li><a href="https://cms.qsis.cn/rss.xml">RSS 订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/qsiscms.html">项目介绍</a></li>
+                    <li><a href="https://cms.qsis.cn/license.html">开源协议</a></li>
+                    <li><a href="https://cms.qsis.cn/contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2026 QsCms全势内容管理系统. Powered by QSIS-SSG.</p>
+            <p>Copyright©2016‑2026.　All Rights Reserved.
+<a href=http://beian.qsis.cn>京ICP备2021005632号</a> <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
+<a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
+<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>
+
+<style>
+/* Cookie弹窗 底部滑入 */
+#cookieConsentWrap{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:16px;
+    background:#ffffff;
+    box-shadow:0 -2px 14px rgba(0,0,0,0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+#cookieConsentWrap.show{
+    transform: translateY(0);
+}
+.cookie-inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+.cookie-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 8px 0;
+}
+.cookie-desc{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin:0 0 14px 0;
+}
+.cookie-desc a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.cookie-btn{
+    padding:9px 20px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.btn-accept{
+    background:#222;
+    color:#fff;
+}
+.btn-reject{
+    background:#eeeeee;
+    color:#333;
+}
+</style>
+
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-title">Cookie 使用提示</div>
+        <div class="cookie-desc">
+            本站使用Cookie用于网站体验优化与谷歌广告投放。继续使用网站即代表您同意相关技术。您可以查阅<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>了解详情，也可随时在浏览器设置关闭Cookie。
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptCookie">全部同意</button>
+            <button class="cookie-btn btn-reject" id="rejectCookie">拒绝非必要Cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Google Consent Mode v2 适配，AdSense合规
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+const consentKey = "site_cookie_consent";
+const banner = document.getElementById('cookieConsentWrap');
+const acceptBtn = document.getElementById('acceptCookie');
+const rejectBtn = document.getElementById('rejectCookie');
+
+//读取本地保存的选择
+let saved = localStorage.getItem(consentKey);
+
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
+    banner.classList.remove('show');
+}
+
+if(!saved){
+    //没有做过选择，弹出底部弹窗
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    //初始化默认拒绝广告存储
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+}
+
+acceptBtn.onclick = function(){
+    setConsent('granted','granted');
+};
+rejectBtn.onclick = function(){
+    setConsent('denied','denied');
+};
+</script></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

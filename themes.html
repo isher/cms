@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>主题模板 - QsCms全势内容管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://cms.qsis.cn/themes.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsCms全势内容管理系统 RSS订阅">
+<meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
+<meta name="description" content="QsCms（原QsisCms）前台主题模板展示：16 套开源主题，商务、企业、咨询、博客、阅读、艺术、游戏、应援等场景，随发行包提供，后台一键切换。">
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site" content="https://cms.qsis.cn">
+    <meta property="og:image" content="/upload/images/favicon.ico">
+<link rel="stylesheet" href="https://cms.qsis.cn/files/theme/Qsiscms/style.css">
+    <!--
+           这是来自于本站开发的自有程序。尚未开源
+                              _.._        ,----------.
+                           ,'      `.    ( 就知道扒皮 )
+                          /  __) __` \    `-,-------'
+                         (  (`-`(-')  ) _.-'
+                         /)  \  = /  (
+                        /'    |--' .  \
+                       (  ,---|  `-.)__`
+                        )(  `-.,--'   _`-.
+                       '/,'          (    ",
+                        (_       ,    `/,-' )
+                        `.__,  : `-'/  /`--'
+                          |     `--'  |
+                          `   `-._   /
+                           \        (
+                           /\ .      \. 
+                          / |` \     ,-\
+                         /  \| .)   /   \
+                        ( ,'|\    ,'     :
+                        | \,`.`--"/      }
+                        `,'    \  |,'    /
+                       / "-._   `-/      |
+                       "-.   "-.,'|     ;
+                      /        _/["---'""]
+                     :        /  |"-     '
+                     '           |      /
+                                 `      |
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body>
+<!-- 导航栏 -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="brand">
+            <a href="https://cms.qsis.cn">QsCms全势内容管理系统</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn/tag/Qsis/" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/contact.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>            <a href="#" class="nav-cta">免费开始</a>
+        </nav>
+    </div>
+</header>
+<script>
+const headerDom = document.getElementById('siteHeader');
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
+        headerDom.classList.add('header-fixed');
+    } else {
+        headerDom.classList.remove('header-fixed');
+    }
+});
+
+navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    mainNav.classList.toggle('open');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        navToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+    });
+});
+</script>
+<!-- 主题模板 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <span class="eyebrow">Themes</span>
+            <h2>主题模板</h2>
+            <p>前台主题共 16 套，全部随发行包提供，后台一键切换；主题由 PHP 模板 + CSS 组成，可直接改样式、改布局，不用动核心程序。</p>
+        </div>
+        <div class="theme-grid">
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_business.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_business.jpg" alt="Qsis_business 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_business</h3><span class="theme-chip">商务</span></div>
+                    <p class="theme-desc">商务站：首屏卖点、特性、流程、案例、FAQ</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_business.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_corp.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_corp.jpg" alt="Qsis_corp 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_corp</h3><span class="theme-chip">商务</span></div>
+                    <p class="theme-desc">企业站：品牌介绍 + 产品与服务</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_corp.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_consulting.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_consulting.jpg" alt="Qsis_consulting 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_consulting</h3><span class="theme-chip">商务</span></div>
+                    <p class="theme-desc">咨询/律所类：服务项与案例陈述</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_consulting.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_swbj.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_swbj.jpg" alt="Qsis_swbj 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_swbj</h3><span class="theme-chip">官网</span></div>
+                    <p class="theme-desc">官网长文版：适合做产品手册与文档入口</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_swbj.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/blog_default.jpg" target="_blank" rel="noopener"><img src="upload/themes/blog_default.jpg" alt="blog_default 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>blog_default</h3><span class="theme-chip">博客</span></div>
+                    <p class="theme-desc">经典博客：文章流 + 标签页</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/blog_default.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_novel.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_novel.jpg" alt="Qsis_novel 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_novel</h3><span class="theme-chip">阅读</span></div>
+                    <p class="theme-desc">阅读站：长篇连载、章节式浏览</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_novel.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_art.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_art.jpg" alt="Qsis_art 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_art</h3><span class="theme-chip">艺术</span></div>
+                    <p class="theme-desc">艺术展示：作品图集为主视觉</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_art.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_flower.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_flower.jpg" alt="Qsis_flower 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_flower</h3><span class="theme-chip">文艺</span></div>
+                    <p class="theme-desc">文艺向：图文并排、留白多</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_flower.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/rl_rainbow.jpg" target="_blank" rel="noopener"><img src="upload/themes/rl_rainbow.jpg" alt="rl_rainbow 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>rl_rainbow</h3><span class="theme-chip">文艺</span></div>
+                    <p class="theme-desc">文艺向：多彩渐变配色</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/rl_rainbow.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_red.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_red.jpg" alt="Qsis_red 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_red</h3><span class="theme-chip">经典</span></div>
+                    <p class="theme-desc">经典红：稳重机构站</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_red.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_redhead.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_redhead.jpg" alt="Qsis_redhead 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_redhead</h3><span class="theme-chip">创意</span></div>
+                    <p class="theme-desc">创意向：大胆排版，适合个人品牌</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_redhead.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_game.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_game.jpg" alt="Qsis_game 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_game</h3><span class="theme-chip">游戏</span></div>
+                    <p class="theme-desc">游戏/主题站：深色游戏化视觉</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_game.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_idol_arena.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_idol_arena.jpg" alt="Qsis_idol_arena 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_idol_arena</h3><span class="theme-chip">偶像</span></div>
+                    <p class="theme-desc">偶像应援 · 舞台站</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_idol_arena.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_idol_podium.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_idol_podium.jpg" alt="Qsis_idol_podium 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_idol_podium</h3><span class="theme-chip">偶像</span></div>
+                    <p class="theme-desc">偶像应援 · 领奖台版</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_idol_podium.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Qsis_idol_stage.jpg" target="_blank" rel="noopener"><img src="upload/themes/Qsis_idol_stage.jpg" alt="Qsis_idol_stage 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Qsis_idol_stage</h3><span class="theme-chip">偶像</span></div>
+                    <p class="theme-desc">偶像应援 · 舞台灯效版</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Qsis_idol_stage.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-card reveal">
+                <a class="theme-shot" href="upload/themes/Cn_newyear.jpg" target="_blank" rel="noopener"><img src="upload/themes/Cn_newyear.jpg" alt="Cn_newyear 主题预览" loading="lazy"></a>
+                <div class="theme-body">
+                    <div class="theme-head"><h3>Cn_newyear</h3><span class="theme-chip">节庆</span></div>
+                    <p class="theme-desc">节庆专题：春节氛围模板</p>
+                    <div class="theme-actions">
+                        <a class="btn btn-primary btn-sm" href="upload/themes/Cn_newyear.jpg" target="_blank" rel="noopener">看大图</a>
+                        <a class="btn btn-outline btn-sm" href="https://github.com/isherqiao/QScms/releases" target="_blank" rel="noopener">下载</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme-foot">
+            <p>主题在程序目录 <code>files/theme/</code> 下，一个目录就是一套主题；切主题在后台「主题」页完成。</p>
+        </div>
+    </div>
+</section>
+<style>
+.theme-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; }
+.theme-card { background:#fff; border:1px solid var(--border-color); border-radius:var(--radius-lg); overflow:hidden; transition:all var(--transition); display:flex; flex-direction:column; }
+.theme-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:transparent; }
+.theme-shot { display:block; aspect-ratio:16/10; overflow:hidden; background:var(--bg-soft); }
+.theme-shot img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+.theme-card:hover .theme-shot img { transform:scale(1.04); }
+.theme-body { padding:20px 22px 24px; display:flex; flex-direction:column; gap:10px; flex:1; }
+.theme-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.theme-head h3 { font-size:1.05rem; font-weight:700; margin:0; color:var(--n-900); }
+.theme-chip { font-size:.75rem; padding:2px 10px; border-radius:999px; background:var(--c-primary-50); color:var(--c-primary-600); white-space:nowrap; }
+.theme-desc { color:var(--text-secondary); font-size:.92rem; line-height:1.65; margin:0; flex:1; }
+.theme-actions { display:flex; gap:10px; margin-top:4px; }
+.btn-sm { padding:8px 18px; font-size:.85rem; }
+.theme-foot { margin-top:36px; color:var(--text-muted); font-size:.9rem; text-align:center; }
+.theme-foot code { background:var(--bg-soft); padding:2px 6px; border-radius:4px; }
+</style>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">QsCms全势内容管理系统</span>
+                <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/features.html">功能特性</a></li>
+                    <li><a href="https://cms.qsis.cn/docs/">使用文档</a></li>
+                    <li><a href="https://cms.qsis.cn/themes.html">主题模板</a></li>
+                    <li><a href="https://cms.qsis.cn/tag/更新快讯/index.html">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/quick-start.html">快速开始</a></li>
+                    <li><a href="https://cms.qsis.cn/faq.html">常见问题</a></li>
+                    <li><a href="https://cms.qsis.cn/dev-guide.html">开发指南</a></li>
+                    <li><a href="https://cms.qsis.cn/rss.xml">RSS 订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/qsiscms.html">项目介绍</a></li>
+                    <li><a href="https://cms.qsis.cn/license.html">开源协议</a></li>
+                    <li><a href="https://cms.qsis.cn/contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2026 QsCms全势内容管理系统. Powered by QSIS-SSG.</p>
+            <p>Copyright©2016‑2026.　All Rights Reserved.
+<a href=http://beian.qsis.cn>京ICP备2021005632号</a> <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
+<a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
+<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>
+
+<style>
+/* Cookie弹窗 底部滑入 */
+#cookieConsentWrap{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:16px;
+    background:#ffffff;
+    box-shadow:0 -2px 14px rgba(0,0,0,0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+#cookieConsentWrap.show{
+    transform: translateY(0);
+}
+.cookie-inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+.cookie-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 8px 0;
+}
+.cookie-desc{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin:0 0 14px 0;
+}
+.cookie-desc a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.cookie-btn{
+    padding:9px 20px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.btn-accept{
+    background:#222;
+    color:#fff;
+}
+.btn-reject{
+    background:#eeeeee;
+    color:#333;
+}
+</style>
+
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-title">Cookie 使用提示</div>
+        <div class="cookie-desc">
+            本站使用Cookie用于网站体验优化与谷歌广告投放。继续使用网站即代表您同意相关技术。您可以查阅<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>了解详情，也可随时在浏览器设置关闭Cookie。
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptCookie">全部同意</button>
+            <button class="cookie-btn btn-reject" id="rejectCookie">拒绝非必要Cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Google Consent Mode v2 适配，AdSense合规
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+const consentKey = "site_cookie_consent";
+const banner = document.getElementById('cookieConsentWrap');
+const acceptBtn = document.getElementById('acceptCookie');
+const rejectBtn = document.getElementById('rejectCookie');
+
+//读取本地保存的选择
+let saved = localStorage.getItem(consentKey);
+
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
+    banner.classList.remove('show');
+}
+
+if(!saved){
+    //没有做过选择，弹出底部弹窗
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    //初始化默认拒绝广告存储
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+}
+
+acceptBtn.onclick = function(){
+    setConsent('granted','granted');
+};
+rejectBtn.onclick = function(){
+    setConsent('denied','denied');
+};
+</script></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

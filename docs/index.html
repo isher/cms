@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>使用文档 - QsCms全势内容管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://cms.qsis.cn/docs/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" type="application/rss+xml" href="https://cms.qsis.cn/rss.xml" title="QsCms全势内容管理系统 RSS订阅">
+<meta name="thumbnail" content="https://cms.qsis.cn/upload/images/logo.jpg">
+<meta name="description" content="QScms 使用文档：系统概览、目录结构、安装部署、后台功能、数据存储、主题与多语言、静态化 SSG、AI 发文接口、安全加固、日常操作与排错速查。">
+	    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="icon" type="image/png" href="https://cms.qsis.cn/upload/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site" content="https://cms.qsis.cn">
+    <meta property="og:image" content="/upload/images/favicon.ico">
+<link rel="stylesheet" href="https://cms.qsis.cn/files/theme/Qsiscms/style.css">
+    <!--
+           这是来自于本站开发的自有程序。尚未开源
+                              _.._        ,----------.
+                           ,'      `.    ( 就知道扒皮 )
+                          /  __) __` \    `-,-------'
+                         (  (`-`(-')  ) _.-'
+                         /)  \  = /  (
+                        /'    |--' .  \
+                       (  ,---|  `-.)__`
+                        )(  `-.,--'   _`-.
+                       '/,'          (    ",
+                        (_       ,    `/,-' )
+                        `.__,  : `-'/  /`--'
+                          |     `--'  |
+                          `   `-._   /
+                           \        (
+                           /\ .      \. 
+                          / |` \     ,-\
+                         /  \| .)   /   \
+                        ( ,'|\    ,'     :
+                        | \,`.`--"/      }
+                        `,'    \  |,'    /
+                       / "-._   `-/      |
+                       "-.   "-.,'|     ;
+                      /        _/["---'""]
+                     :        /  |"-     '
+                     '           |      /
+                                 `      |
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body>
+<!-- 导航栏 -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="brand">
+            <a href="https://cms.qsis.cn">QsCms全势内容管理系统</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <div class="menu-main"><ul><li><a href="https://cms.qsis.cn/" target="_self">首 页</a></li><li><a href="https://cms.qsis.cn/qiaoshuo.html" target="_blank">开发者</a></li><li><a href="https://bbme.qsis.cn/tag/Qsis/" target="_blank">开发博客</a></li><li><a href="https://cms.qsis.cn/contact.html" target="_blank">联系</a></li><li><a href="http://qsis.cn" target="_blank">总站首页</a></li></ul></div>            <a href="#" class="nav-cta">免费开始</a>
+        </nav>
+    </div>
+</header>
+<script>
+const headerDom = document.getElementById('siteHeader');
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
+        headerDom.classList.add('header-fixed');
+    } else {
+        headerDom.classList.remove('header-fixed');
+    }
+});
+
+navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    mainNav.classList.toggle('open');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        navToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+    });
+});
+</script>
+<!-- 使用文档 -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <span class="eyebrow">Documentation</span>
+            <h2>使用文档</h2>
+            <p>从部署到运维的完整说明。要动手跑一遍，先看 <a href="quick-start.html">快速开始</a>；这里讲的是每一项为什么这么设计、遇到问题怎么定位。</p>
+        </div>
+
+        <div class="doc-layout">
+            <nav class="doc-toc">
+                <a href="#overview">一、系统概览</a>
+                <a href="#structure">二、目录结构</a>
+                <a href="#deploy">三、安装与部署</a>
+                <a href="#backend">四、后台功能</a>
+                <a href="#storage">五、数据存储</a>
+                <a href="#theme">六、主题、插件与多语言</a>
+                <a href="#ssg">七、静态化（SSG）</a>
+                <a href="#ai">八、AI 发文接口</a>
+                <a href="#security">九、安全加固</a>
+                <a href="#daily">十、日常操作</a>
+                <a href="#trouble">十一、排错速查</a>
+            </nav>
+
+            <div class="doc-body">
+                <h3 id="overview">一、系统概览</h3>
+                <p>QScms 是一套以文件为存储介质的轻量级 CMS：前台动态渲染，同时内置静态站生成器，可以把整站导出为纯 HTML 交给 Nginx、对象存储或静态托管。文章、页面、菜单、站点参数、用户与权限全部存为 PHP 文件，<strong>不依赖数据库</strong>。</p>
+                <ul class="qs-list">
+                    <li>动态前台：单一入口做路由分发，再套主题渲染。</li>
+                    <li>后台管理：文章、页面、广告、友链、留言、投票、插件、主题、语言包、备份、静态化各有独立功能页。</li>
+                    <li>文件存储：文章与页面为「索引数组 + 单行序列化正文」两层结构，配置类数据集中放在配置目录。</li>
+                    <li>多语言：后台与前台各有一套语言包，可在线编辑。</li>
+                    <li>内置能力：静态化 SSG、RSS 与站点地图、IndexNow、搜索引擎提交、投票、打赏、留言、图床、远程备份。</li>
+                </ul>
+
+                <h3 id="structure">二、目录结构</h3>
+<pre class="qs-code">├─ index.php        前台唯一入口（路由分发）
+├─ register.php     前台用户注册
+├─ control/         核心层：引导、函数库、登录鉴权与各功能库
+│  └─ data/         配置、用户、权限、菜单、日志（运行时私有）
+├─ data/            内容数据：文章、页面、广告
+├─ files/           主题、静态主题、插件、语言包、图片、邮件模板
+├─ admin/           后台目录（默认名，可任意改名）
+├─ install/         安装向导 + 预设 + 安装锁
+├─ static_site/     SSG 静态站输出
+├─ upload/          本地上传（按月分目录）
+└─ backups/         备份与快照</pre>
+                <p><strong>哪些能删：</strong>静态输出、后台临时文件与日志、备份目录都可清空后重建；安装完成后整个 install 目录可删除或改名。</p>
+                <p><strong>哪些不能删：</strong>核心层、内容数据目录、主题与语言包、前台入口文件、后台目录。</p>
+
+                <h3 id="deploy">三、安装与部署</h3>
+                <p>环境要求、向导四步、装完必做事项与伪静态配置，都在 <a href="quick-start.html">快速开始</a> 里逐条写清楚了，这里不重复。只补三条经验：</p>
+                <ul class="qs-list">
+                    <li>建议在 Web 服务器上禁止外网访问配置目录与备份目录，备份包不要落在站点根内。</li>
+                    <li>目录权限只放少数必需目录，代码目录保持只读；Linux 用 755/644，属主是 Web 运行用户（常见 www-data）。</li>
+                    <li>Windows 部署同样可行：XAMPP / Apache 配虚拟主机即可，权限按 NTFS 账户给。</li>
+                </ul>
+
+                <h3 id="backend">四、后台功能</h3>
+                <p>后台按功能分组，主菜单结构如下（后台目录名可改，所以这里只讲功能，不给固定路径）：</p>
+                <table class="qs-table">
+                    <tr><th>分组</th><th>能做什么</th></tr>
+                    <tr><td>总控与框架</td><td>设置中枢（页签式）、版本与授权信息、会话心跳、操作与登录日志、报错反馈、官网注册入口</td></tr>
+                    <tr><td>文章与页面</td><td>列表、富文本编辑器（两种编辑器可切换）、AI 翻译提示、图片上传、发布与草稿双态、页面路径自定义</td></tr>
+                    <tr><td>互动</td><td>广告位、友情链接、留言板、打赏记录、投票管理、搜索引擎 URL 提交</td></tr>
+                    <tr><td>媒体</td><td>图片管理、图库浏览选图、Logo 与默认文章图上传、远程图片代理、图床连通测试</td></tr>
+                    <tr><td>设置面板</td><td>基础参数、管理员凭据、文章分页与工具栏、后台外观、全局广告、友链展示、接口与 AI 发文、上传扩展名、页脚与隐私、Cookie 同意、图床、Markdown 导入导出、菜单树、多站点、静态化、GitHub 同步、部署目标、收款、远程抓取、备份策略</td></tr>
+                    <tr><td>静态化与同步</td><td>静态生成引擎、部署推送（Cloudflare Pages / FTP / SFTP）、GitHub Pages 同步（全量或增量）、旧文件清理、定时同步</td></tr>
+                    <tr><td>扩展</td><td>插件启停与黑名单、主题代码在线编辑、语言包单键编辑与整包保存、站点绑定、用户与用户组权限、邮件配置、屏蔽词库</td></tr>
+                </table>
+
+                <h3 id="storage">五、数据存储</h3>
+                <ul class="qs-list">
+                    <li><strong>文章 / 页面两层</strong>：一层是列表索引（PHP 数组），一层是正文（PHP 注释头 + 序列化数据）。改内容格式时两层都要动。</li>
+                    <li><strong>配置与权限</strong>：主配置、权限、菜单、静态化参数、插件开关都是独立 PHP 文件，直接可读可备份。</li>
+                    <li><strong>账号口令</strong>：密码用 Argon2ID 哈希，不可用时回退默认哈希。</li>
+                    <li><strong>迁移</strong>：整站目录拷走即是完整备份，换机器不用导库。</li>
+                </ul>
+
+                <h3 id="theme">六、主题、插件与多语言</h3>
+                <ul class="qs-list">
+                    <li>主题在主题目录下，一个目录一套；后台「基本参数」切换，主题自带选项面板，「主题代码编辑器」可在线改模板。</li>
+                    <li>插件分系统插件与用户插件两类，后台插件管理页启停并维护黑名单。</li>
+                    <li>语言包后台一套、前台一套，后台语言包编辑器可就地改键值，新增语种要补齐全部键，缺的会回退英文。</li>
+                    <li>主题效果与适用场景见 <a href="themes.html">主题模板</a>。</li>
+                </ul>
+
+                <h3 id="ssg">七、静态化（SSG）</h3>
+                <ul class="qs-list">
+                    <li>后台「静态化」配置输出路径、站点地址与生成选项；静态菜单与动态站菜单相互独立。</li>
+                    <li>生成引擎按静态主题渲染页面与文章，写出输出树；生成后可推送到 Cloudflare Pages / FTP / SFTP，或同步到 GitHub Pages。</li>
+                    <li>支持增量与全量两种模式；静态站缺页或为空时，先核对静态主题是否存在、输出路径是否正确，再删缓存全量重生成。</li>
+                    <li>源站可以只用来编辑，公网只对外暴露静态 HTML，安全面最小。</li>
+                </ul>
+
+                <h3 id="ai">八、AI 发文接口</h3>
+                <p>留给外部 Agent（大模型、自动化工具）写入文章的入口，写入口径与后台编辑器一致。</p>
+                <ul class="qs-list">
+                    <li><strong>鉴权</strong>：请求头带密钥，配置里只存密钥的 sha256 哈希，比对用恒定时间算法。</li>
+                    <li><strong>开关</strong>：接口默认关闭，未开启或密钥为空时直接返回 403。</li>
+                    <li><strong>字段</strong>：标题、正文、摘要、标签、状态（发布或草稿）、日期时间、文章 id、作者、是否允许评论；支持新建与按 id 覆盖。</li>
+                    <li><strong>边界</strong>：只认 API Key、不校验后台登录态；不能删除文章、不能改配置或密码、不能上传文件、无命令执行；文章 id 已过滤路径字符，不能穿越写任意文件。</li>
+                    <li><strong>建议</strong>：密钥用密码学随机生成，不要写进前端、日志或 URL；公网开放时叠加 IP 白名单或限流。</li>
+                </ul>
+
+                <h3 id="security">九、安全加固</h3>
+                <table class="qs-table">
+                    <tr><th>风险点</th><th>做法</th></tr>
+                    <tr><td>后台路径被扫</td><td>装完第一件事换 6～10 位无规律目录名，访问一次新目录即自动记录</td></tr>
+                    <tr><td>目录列表暴露</td><td>关闭 Options Indexes</td></tr>
+                    <tr><td>配置与备份被下载</td><td>Web 服务器禁止访问配置与备份目录，备份包不要放站点根内</td></tr>
+                    <tr><td>安装入口长期暴露</td><td>装完删除或改名 install 目录</td></tr>
+                    <tr><td>口令明文传输</td><td>后台登录走 HTTPS</td></tr>
+                    <tr><td>站内工具被滥用</td><td>可执行命令的页面仅对超级管理员开放，生产环境按需停用</td></tr>
+                </table>
+                <p class="qs-note">后台目录为什么能随便改：程序在运行期从请求路径第一段取目录名，并校验后台母版文件存在，结果记进配置。所以改目录不用改代码、不用改配置。</p>
+
+                <h3 id="daily">十、日常操作</h3>
+                <ul class="qs-list">
+                    <li><strong>发文章</strong>：文章 → 新建 → 标题 / 标签 / 日期 → 编辑器写正文 → 发布或存草稿。</li>
+                    <li><strong>建页面</strong>：页面 → 新建 → 设定路径（如 about）→ 访问站点带路径即可。</li>
+                    <li><strong>改菜单</strong>：动态站与静态化各一套菜单，互不影响。</li>
+                    <li><strong>换主题 / 调样式</strong>：基本参数选主题；在线改模板用主题代码编辑器。</li>
+                    <li><strong>上传与图床</strong>：默认按月存本地；图床页选驱动并测试，开启后正文图片可自动改写。</li>
+                    <li><strong>朗读</strong>：文章页按开关与提供商朗读，默认浏览器原生语音合成，可换其他 TTS。</li>
+                    <li><strong>投票 / 打赏 / 留言</strong>：投票插标签渲染，判重按 cookie + IP + 账号；打赏填收款信息，前台展示。</li>
+                    <li><strong>静态化</strong>：配置 → 保存 → 生成 → 检查输出目录的首页文件。</li>
+                    <li><strong>备份</strong>：后台手动打包下载，或计划任务定时打包并 FTP 上传、邮件通知。</li>
+                    <li><strong>多站点</strong>：为每个域名配主题与语言，静态化按站点分别输出。</li>
+                    <li><strong>屏蔽词</strong>：维护词库，保存内容时提示命中。</li>
+                </ul>
+
+                <h3 id="trouble">十一、排错速查</h3>
+                <table class="qs-table">
+                    <tr><th>现象</th><th>原因与处理</th></tr>
+                    <tr><td>所有内页 404</td><td>mod_rewrite 未开或 AllowOverride 不是 All；Nginx 缺 rewrite 规则</td></tr>
+                    <tr><td>打开首页跳安装页</td><td>安装锁缺失；完成安装或补上锁文件</td></tr>
+                    <tr><td>500 / 白屏</td><td>主配置损坏或不可读；开 display_errors 看具体报错</td></tr>
+                    <tr><td>登录后又回登录页</td><td>会话令牌与来源绑定，IP 变化或 Cookie 被清；重新登录</td></tr>
+                    <tr><td>提示无权限</td><td>检查用户组权限、个人追加 / 禁用项、页面权限守卫映射</td></tr>
+                    <tr><td>主题错乱 / 函数未定义</td><td>主题调用了函数库中不存在的函数；核对函数名</td></tr>
+                    <tr><td>中文乱码</td><td>文件编码不是 UTF-8（无 BOM）</td></tr>
+                    <tr><td>图片上传失败</td><td>上传目录不可写、后缀被策略拦截、PHP 上传上限太小</td></tr>
+                    <tr><td>静态站空 / 缺页</td><td>静态路径错、静态主题缺失、缓存与源不一致；删缓存重生成</td></tr>
+                    <tr><td>备份打包失败</td><td>zip / ZipArchive 不可用、exec 被禁用、源目录权限不足</td></tr>
+                    <tr><td>保存配置或发文提示目录不可写</td><td>必需可写目录缺权限；跑权限修复脚本，核对属主与 ACL</td></tr>
+                    <tr><td>邮件发不出</td><td>SMTP 端口 / 加密方式错（465 用 SSL、587 用 STARTTLS），且要用授权码而非登录密码</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+.doc-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: start; max-width: 1100px; margin: 0 auto; }
+.doc-toc { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 6px; padding: 18px; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: #fff; }
+.doc-toc a { font-size: .92rem; color: var(--text-secondary); padding: 6px 8px; border-radius: 6px; transition: all var(--transition-fast); }
+.doc-toc a:hover { background: var(--c-primary-50); color: var(--c-primary-600); }
+.doc-body h3 { font-size: 1.15rem; margin: 34px 0 12px; color: var(--n-900); scroll-margin-top: 100px; }
+.doc-body h3:first-child { margin-top: 0; }
+.doc-body p { color: var(--text-secondary); line-height: 1.9; margin: 0 0 12px; }
+.qs-list { padding-left: 22px; color: var(--text-secondary); line-height: 1.9; margin: 0 0 16px; }
+.qs-list li { margin-bottom: 6px; }
+.qs-table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: .93rem; }
+.qs-table th, .qs-table td { border: 1px solid var(--border-color); padding: 10px 14px; text-align: left; vertical-align: top; }
+.qs-table th { background: var(--bg-soft); font-weight: 600; white-space: nowrap; }
+.qs-code { background: var(--n-900); color: #e6e6e6; padding: 16px 18px; border-radius: 8px; overflow-x: auto; font-size: .85rem; line-height: 1.7; margin: 12px 0 16px; }
+.qs-note { font-size: .92rem; background: var(--bg-soft); border-left: 3px solid var(--c-primary-600); padding: 12px 16px; border-radius: 6px; }
+@media (max-width: 900px) {
+    .doc-layout { grid-template-columns: 1fr; gap: 20px; }
+    .doc-toc { position: static; }
+}
+</style>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">QsCms全势内容管理系统</span>
+                <p>简单、高速、可二次开发的轻量级静态站点生成程序，专为开发者打造。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/features.html">功能特性</a></li>
+                    <li><a href="https://cms.qsis.cn/docs/">使用文档</a></li>
+                    <li><a href="https://cms.qsis.cn/themes.html">主题模板</a></li>
+                    <li><a href="https://cms.qsis.cn/tag/更新快讯/index.html">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/quick-start.html">快速开始</a></li>
+                    <li><a href="https://cms.qsis.cn/faq.html">常见问题</a></li>
+                    <li><a href="https://cms.qsis.cn/dev-guide.html">开发指南</a></li>
+                    <li><a href="https://cms.qsis.cn/rss.xml">RSS 订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="https://cms.qsis.cn/qsiscms.html">项目介绍</a></li>
+                    <li><a href="https://cms.qsis.cn/license.html">开源协议</a></li>
+                    <li><a href="https://cms.qsis.cn/contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2026 QsCms全势内容管理系统. Powered by QSIS-SSG.</p>
+            <p>Copyright©2016‑2026.　All Rights Reserved.
+<a href=http://beian.qsis.cn>京ICP备2021005632号</a> <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
+<a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
+<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>
+
+<style>
+/* Cookie弹窗 底部滑入 */
+#cookieConsentWrap{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:16px;
+    background:#ffffff;
+    box-shadow:0 -2px 14px rgba(0,0,0,0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+#cookieConsentWrap.show{
+    transform: translateY(0);
+}
+.cookie-inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+.cookie-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 8px 0;
+}
+.cookie-desc{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin:0 0 14px 0;
+}
+.cookie-desc a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.cookie-btn{
+    padding:9px 20px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.btn-accept{
+    background:#222;
+    color:#fff;
+}
+.btn-reject{
+    background:#eeeeee;
+    color:#333;
+}
+</style>
+
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-title">Cookie 使用提示</div>
+        <div class="cookie-desc">
+            本站使用Cookie用于网站体验优化与谷歌广告投放。继续使用网站即代表您同意相关技术。您可以查阅<a href="https://cms.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://cms.qsis.cn/privacy-en.html">Privacy Policy</a>了解详情，也可随时在浏览器设置关闭Cookie。
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptCookie">全部同意</button>
+            <button class="cookie-btn btn-reject" id="rejectCookie">拒绝非必要Cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Google Consent Mode v2 适配，AdSense合规
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+const consentKey = "site_cookie_consent";
+const banner = document.getElementById('cookieConsentWrap');
+const acceptBtn = document.getElementById('acceptCookie');
+const rejectBtn = document.getElementById('rejectCookie');
+
+//读取本地保存的选择
+let saved = localStorage.getItem(consentKey);
+
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
+    banner.classList.remove('show');
+}
+
+if(!saved){
+    //没有做过选择，弹出底部弹窗
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    //初始化默认拒绝广告存储
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+}
+
+acceptBtn.onclick = function(){
+    setConsent('granted','granted');
+};
+rejectBtn.onclick = function(){
+    setConsent('denied','denied');
+};
+</script></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
